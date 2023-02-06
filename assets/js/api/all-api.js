@@ -26,3 +26,18 @@
 //   };
 
 
+const userApi={
+   login:function(json){
+    return FetchApi2(json,``,"POST");
+}
+}
+
+const addressApi={
+   state:function(){
+    return FetchApi();
+   },
+   district:function(params) {
+    return FetchApi()
+   },
+   
+}

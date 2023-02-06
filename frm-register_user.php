@@ -133,14 +133,7 @@
                                             </select>
                                         </div>
                                     </div>
-                                    <div class="col-md-4">
-                                        <div class="form-group">
-                                            <label>GRAMPANCHAYAT</label>
-                                            <select name="village" class="form-control" id="grampanchayt">
-                                                <option value="select">Select</option>
-                                            </select>
-                                        </div>
-                                    </div>
+                                    
                                     <div class="col-md-4">
                                         <div class="form-group">
                                             <label>VILLAGE</label>
