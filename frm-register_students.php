@@ -167,15 +167,6 @@
                                 </div>
 
                                 <div class="row">
-
-                                    <div class="col-md-4">
-                                        <div class="form-group">
-                                            <label>GRAMPANCHAYAT</label>
-                                            <select name="local_body" class="form-control" id="local_body">
-                                                <option value="select">Select</option>
-                                            </select>
-                                        </div>
-                                    </div>
                                     <div class="col-md-4">
                                         <div class="form-group">
                                             <label>VILLAGE</label>

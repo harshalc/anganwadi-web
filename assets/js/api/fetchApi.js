@@ -1,3 +1,5 @@
+const API_URL="https://kitintellect.tech";
+
 const FetchApi = (data, path, method) => {
     let res;
     var settings = {
