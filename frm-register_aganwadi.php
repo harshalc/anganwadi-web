@@ -48,13 +48,13 @@
                                 <div class="row">
                                     <div class="col-md-4 form-group">
                                         <label for="Prakalpa" class="form-label">Prakalpa Name<sup>*</sup></label>
-                                        <select name="Prakalpa" class="form-control" id="" required>
+                                        <select name="title" class="form-control" id="title" required>
                                             <option value="select">Select</option>
                                         </select>
                                     </div>
                                     <div class="col-md-4 form-group">
                                         <label for="Bit" class="form-label">Bit Name<sup>*</sup></label>
-                                        <select name="Bit" class="form-control" id="" required>
+                                        <select name="title" class="form-control" id="title1" required>
                                             <option value="select">Select</option>
                                         </select>
                                     </div>
@@ -64,15 +64,15 @@
                                 <div class="row">
                                     <div class="col-md-4 form-group">
                                         <label for="" class="form-label">Aganwadi Name<sup class="text-danger">*</sup></label>
-                                        <input type="text" name="name" class="form-control" id="Aganwadi" placeholder="Enter Aganwadi Name " required>
+                                        <input type="text" name="name" class="form-control" id="name" placeholder="Enter Aganwadi Name " required>
                                     </div>
                                     <div class="col-md-4 form-group">
                                         <label for="" class="form-label">Aganwadi Number<sup class="text-danger">*</sup></label>
-                                        <input type="number" name="name" class="form-control" id="" placeholder="Enter Aganwadi Number " required>
+                                        <input type="number" name="aganwadi_no" class="form-control" id="aganwadi_no" placeholder="Enter Aganwadi Number " required>
                                     </div>
                                     <div class="col-md-4 form-group">
                                         <label for="Prakalpa" class="form-label">Year<sup>*</sup></label>
-                                        <select name="Year" class="form-control" id="" required>
+                                        <select name="Year" class="form-control" id="year" required>
                                             <option value="select">Select</option>
                                             <option value="select">2023-2024</option>
                                             <option value="select">2024-2025</option>
@@ -129,7 +129,7 @@
 
                                 <div class="row">
                                     <div class="col-md-12 d-flex justify-content-center" id="">
-                                        <button type="button" class="btn btn-info my-2" id="">Submit</button>
+                                        <button type="button" class="btn btn-info my-2" id="submit">Submit</button>
                                     </div>
                                 </div>
                             </div>
@@ -142,6 +142,16 @@
 </div>
 <!-- ./wrapper -->
 <?php include './include-common-scripts.php';?>
+<script src="./assets/js/filter/anganwadiOpstionList.js"></script>
+<script src="./assets/js/filter/anganwadiRegister.js"></script>
+
+<script>
+    praklpOpstionList();
+    bitOpstionList();
+    anganwadiRegister();
+    stateOptionsSet();
+    
+</script>
 </body>
 
 </html>

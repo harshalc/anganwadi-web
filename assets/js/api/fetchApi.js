@@ -1,9 +1,7 @@
-const API_URL="https://kitintellect.tech";
-
 const FetchApi = (data, path, method) => {
     let res;
     var settings = {
-      url: `${API_URL}${path}`,
+      url: `${"https://kitintellect.tech"}${path}`,
       data: data,
       dataType: "json",
       method: method,
@@ -21,7 +19,7 @@ const FetchApi = (data, path, method) => {
   const FetchApi2 = (data, path, method) => {
     let res;
     var settings = {
-      url: `${API_URL}${path}`,
+      url: `${"https://kitintellect.tech"}${path}`,
       data: data,
       dataType: "json",
       method: method,
@@ -39,4 +37,3 @@ const FetchApi = (data, path, method) => {
 
     
 };
-console.log(API_URL);

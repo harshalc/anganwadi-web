@@ -62,7 +62,7 @@
                                                     <th>Address</th>
                                                 </tr>
                                             </thead>
-                                            <tbody id="addUser">
+                                            <tbody id="aganwadiList">
                                                 <tr>
                                                     <td></td>
                                                     <td></td>
@@ -94,6 +94,7 @@
     <!-- ./wrapper -->
     <?php include './include-common-scripts.php';?>
     <?php include './include-datatable-scripts.php';?>
+    <script src="./assets/js/filter/aganwadiGetList.js"></script>
 <script>
   $(function () {
     $("#example1").DataTable({
@@ -110,6 +111,8 @@
       "responsive": true,
     });
   });
+
+  aganwadiGetList()
 </script>
 </body>
 
