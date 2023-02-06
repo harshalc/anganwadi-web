@@ -57,7 +57,7 @@
                                                     <th>Bit Name</th>
                                                 </tr>
                                             </thead>
-                                            <tbody id="">
+                                            <tbody id="bitList">
                                                 <tr>
                                                     <td></td>
                                                     <td></td>
@@ -83,6 +83,8 @@
     <!-- ./wrapper -->
     <?php include './include-common-scripts.php';?>
     <?php include './include-datatable-scripts.php';?>
+
+    <script src="./assets/js/filter/bitGEtList.js"></script>
 <script>
   $(function () {
     $("#example1").DataTable({
@@ -99,6 +101,8 @@
       "responsive": true,
     });
   });
+
+  bitGEtList();
 </script>
 </body>
 

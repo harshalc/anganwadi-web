@@ -57,7 +57,7 @@
                                                     <th>Prakalpa Name</th>
                                                 </tr>
                                             </thead>
-                                            <tbody id="">
+                                            <tbody id="praklpaList">
                                                 <tr>
                                                     <td></td>
                                                     <td></td>
@@ -83,6 +83,7 @@
     <!-- ./wrapper -->
     <?php include './include-common-scripts.php';?>
     <?php include './include-datatable-scripts.php';?>
+    <script src="./assets/js/filter/praklpaGetList.js"></script>
 <script>
   $(function () {
     $("#example1").DataTable({
@@ -99,6 +100,11 @@
       "responsive": true,
     });
   });
+
+</script>
+
+<script>
+     prakalpaGetList();
 </script>
 </body>
 

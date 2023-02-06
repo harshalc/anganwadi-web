@@ -49,15 +49,12 @@
                                 <div class="row">
                                     <div class="col-md-4 form-group">
                                         <label for="" class="form-label">Prakalpa Name<sup class="text-danger">*</sup></label>
-                                        <input type="text" name="name" class="form-control" id="Prakalpa" placeholder="Enter Prakalpa Name " required>
+                                        <input type="text" name="title" class="form-control" id="title" placeholder="Enter Prakalpa Name " required>
                                     </div>
                                 </div>
-
-
-
                                 <div class="row">
                                     <div class="col-md-12 d-flex justify-content-center" id="">
-                                        <button type="button" class="btn btn-info my-2" id="">Submit</button>
+                                        <button type="button" class="btn btn-info my-2" id="submit">Submit</button>
                                     </div>
                                 </div>
                             </div>
@@ -70,6 +67,14 @@
 </div>
 <!-- ./wrapper -->
 <?php include './include-common-scripts.php';?>
+
+
+<script src="./assets/js/filter/praklpaRegister.js"></script>
+
+<script>
+    praklpaRegister();
+   
+</script>
        
 </body>
 
