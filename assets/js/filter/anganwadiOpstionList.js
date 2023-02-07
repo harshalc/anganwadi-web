@@ -72,8 +72,6 @@ const bitOpstionList = () => {
     DistrictName.innerHTML = optionArray.join("");
     DistrictName.addEventListener("change", (e) => {
       blocksName.innerHTML = " <option value=''>Select Taluka</option>";
-      // grampanchayatName.innerHTML =
-      //   " <option value=''>Select Grampanchayat</option>";
       villageName.innerHTML = " <option value=''>Select villages</option>";
   
       blocksOptionsSet(e.target.value);
@@ -111,13 +109,8 @@ const bitOpstionList = () => {
       villageOptionsSet(e.target.value);
   
     });
-    // blocksName.innerHTML = options;
-    // blocksName.addEventListener("change", (e) => {
-    //   grampanchayatOptionsSet(e.target.value);
-    // });
+  
   };
-
-
 
   //village
 
