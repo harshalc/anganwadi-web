@@ -1,9 +1,6 @@
 const studentGetList = () => {
   const { data } = studentApi.GetList();
-  console.log(data, "asdada");
-
   const studentList = document.querySelector("#studentList");
-
   const student = data?.map((element, i) => {
     return `
             <tr>
@@ -19,7 +16,7 @@ const studentGetList = () => {
             <td>${element?.state} ${element?.district} ${element?.block} ${
       element?.village
     }</td>
-  <td class="text-center"><span><a href="schemeRegistration.php?id=${
+  <td class="text-center"><span><a href="frm-register_students.php?id=${
     element.id
   }"><i class="fas fa-edit mr-3 text-primary"></i></a></span>
                             <span><a id="deleteRow-${
@@ -30,4 +27,14 @@ const studentGetList = () => {
   });
 
   studentList.innerHTML = student.join("");
+  data?.forEach((data) => {
+    if (!document.querySelector(`#deleteRow-${data.id}`)) return;
+    document
+      .querySelector(`#deleteRow-${data.id}`)
+      .addEventListener("click", (e) => {
+        e.preventDefault();
+        document.querySelector(`#deleteRow-${data.id}`).closest("tr").remove();
+        const response = DeleteStudentAPI(data.id);
+      });
+  });
 };

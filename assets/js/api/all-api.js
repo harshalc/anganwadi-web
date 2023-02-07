@@ -57,28 +57,42 @@ const bitApi = {
 const aganwadiApi = {
   register: function (json) {
     const stringifyObj = JSON.stringify(json);
-    return FetchApi2(stringifyObj, `/api_anganwadi/public/anganwadi/create`, "POST");
+    return FetchApi2(
+      stringifyObj,
+      `/api_anganwadi/public/anganwadi/create`,
+      "POST"
+    );
   },
-    GetList: function () {
+  GetList: function () {
     return FetchApi("", `/api_anganwadi/public/anganwadi/listAll`, "GET");
   },
 };
 
-
-
 // Address
- const addressApi = {
+const addressApi = {
   state: function () {
     return FetchApi("", `/demographic-info/public/states/all`, "GET");
   },
   district: function (state_code) {
-    return FetchApi("", `/demographic-info/public/districts/${state_code}`, "GET");
+    return FetchApi(
+      "",
+      `/demographic-info/public/districts/${state_code}`,
+      "GET"
+    );
   },
   block: function (district_code) {
-    return FetchApi("",`/demographic-info/public/blocks/${district_code}`,"GET")
+    return FetchApi(
+      "",
+      `/demographic-info/public/blocks/${district_code}`,
+      "GET"
+    );
   },
   village: function (block_code) {
-    return FetchApi("", `/demographic-info/public/block/get/villages/${block_code}`, "GET");
+    return FetchApi(
+      "",
+      `/demographic-info/public/block/get/villages/${block_code}`,
+      "GET"
+    );
   },
 };
 
@@ -87,20 +101,27 @@ const aganwadiApi = {
 const aganwadiUserApi = {
   register: function (json) {
     const stringifyObj = JSON.stringify(json);
-    return FetchApi2(stringifyObj, `/api_anganwadi/public/anganwadi_user`, "POST");
+    return FetchApi2(
+      stringifyObj,
+      `/api_anganwadi/public/anganwadi_user`,
+      "POST"
+    );
   },
-    GetList: function () {
+  GetList: function () {
     return FetchApi("", `/api_anganwadi/public/anganwadi_user`, "GET");
   },
 };
 
-
 const studentApi = {
   register: function (json) {
     const stringifyObj = JSON.stringify(json);
-    return FetchApi2(stringifyObj, `/api_anganwadi/public/student/create`, "POST");
+    return FetchApi2(
+      stringifyObj,
+      `/api_anganwadi/public/student/create`,
+      "POST"
+    );
   },
-    GetList: function () {
+  GetList: function () {
     return FetchApi("", `/api_anganwadi/public/students/listAll`, "GET");
   },
 };
@@ -112,11 +133,37 @@ const userApi = {
     const stringifyObj = JSON.stringify(json);
     return FetchApi2(stringifyObj, `/api_anganwadi/public/user/create`, "POST");
   },
-    GetList: function () {
+  GetList: function () {
     return FetchApi("", `/api_anganwadi/public/users/listAll`, "GET");
   },
 };
 
+/* DELETE API */
+
+const DeletePraklpaAPI = (id) => {
+  return FetchApi("", `/api_anganwadi/public/prakalpa/delete/${id}`, "DELETE");
+};
+
+const DeleteBitpaAPI = (id) => {
+  return FetchApi("", `/api_anganwadi/public/bit/delete/${id}`, "DELETE");
+};
+
+const DeleteStudentAPI = (id) => {
+  return FetchApi("", `/api_anganwadi/public/student/delete/${id}`, "DELETE");
+};
+
+const DeleteUserAPI = (id) => {
+  return FetchApi("", `/api_anganwadi/public/user/delete/${id}`, "DELETE");
+};
+const DeleteAganwadiAPI = (id) => {
+  return FetchApi("", `/api_anganwadi/public/anganwadi/delete/${id}`, "DELETE");
+};
+
+const DeleteAganwadiUserAPI = (id) => {
+  return FetchApi("", `/api_anganwadi/public/anganwadi_user/${id}`, "DELETE");
+};
 
 
- 
+
+
+
