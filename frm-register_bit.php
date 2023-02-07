@@ -72,9 +72,20 @@
 <!-- ./wrapper -->
 <?php include './include-common-scripts.php';?>
 <script src="./assets/js/filter/bitRegister.js"></script>
+<script src="./assets/js/filter/updateBit.js"></script>
+<script src="./assets/js/filter/getQueryParamValue.js"></script>
 <script>
-    bitRegiste();
+    (() => {
+        let id = getQueryParamValue("id")
+        if (!id) {
+             bitRegister();
+            return
+        }
+        updateBit(id)
+    })()
+
 </script>
+
 </body>
 
 </html>

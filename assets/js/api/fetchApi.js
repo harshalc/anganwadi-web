@@ -17,6 +17,7 @@ const FetchApi = (data, path, method) => {
   
 
   const FetchApi2 = (data, path, method) => {
+    
     let res;
     var settings = {
       url: `${"https://kitintellect.tech"}${path}`,
