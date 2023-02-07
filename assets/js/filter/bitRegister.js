@@ -12,7 +12,8 @@ const bitRegiste=(json)=>{
     }
     
     const response= bitApi.register(user);
-    console.log(response,"data respones");
+
+    alert("Form submitted successfully");
 
     })
 }

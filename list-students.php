@@ -65,7 +65,7 @@
                                                     <th>Update / Delete</th>
                                                 </tr>
                                             </thead>
-                                            <tbody id="addUser">
+                                            <tbody id="studentList">
                                                 <tr>
                                                     <td></td>
                                                     <td></td>
@@ -101,6 +101,7 @@
     <!-- ./wrapper -->
     <?php include './include-common-scripts.php';?>
     <?php include './include-datatable-scripts.php';?>
+    <script src="./assets/js/filter/studentGetList.js"></script>
 <script>
   $(function () {
     $("#example1").DataTable({
@@ -117,6 +118,8 @@
       "responsive": true,
     });
   });
+
+  studentGetList();
 </script>
 </body>
 

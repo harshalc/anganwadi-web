@@ -36,7 +36,7 @@
             <!-- Main content -->
             <section class="content">
                 <div class="container-fluid text-uppercase">
-                    <form id="UserFormData" action="">
+                    <form id="userFormData" action="">
                         <!-- SELECT2 EXAMPLE -->
                         <div class="card card-default">
                             <div class="card-header">
@@ -47,7 +47,7 @@
                                 <div class="row">
                                     <div class="col-md-4 form-group">
                                         <label for="" class="form-label">Role<sup class="text-danger">*</sup></label>
-                                        <select name="role" class="form-control" id="role" required>
+                                        <select name="role" class="form-control" id="role_id" required>
                                             <option value="select">Select</option>
                                             <option value="select">User 1</option>
                                             <option value="select">User 2</option>
@@ -59,17 +59,17 @@
                                 <div class="row">
                                     <div class="col-md-4 form-group">
                                         <label for="" class="form-label">First Name<sup class="text-danger">*</sup></label>
-                                        <input type="text" name="name" class="form-control" id="name" placeholder="Enter First Name " required>
+                                        <input type="text" name="f_name" class="form-control" id="f_name" placeholder="Enter First Name " required>
 
                                     </div>
                                     <div class="col-md-4 form-group">
                                         <label for="" class="form-label">Middle Name<sup class="text-danger">*</sup></label>
-                                        <input type="text" name="middle_name" class="form-control" id="middle_name" placeholder="Enter Middle Name " required>
+                                        <input type="text" name="m_name" class="form-control" id="m_name" placeholder="Enter Middle Name " required>
 
                                     </div>
                                     <div class="col-md-4 form-group">
                                         <label for="" class="form-label">Last Name<sup class="text-danger">*</sup></label>
-                                        <input type="text" name="last_name" class="form-control" id="last_name" placeholder="Enter Last Name " required>
+                                        <input type="text" name="l_name" class="form-control" id="l_name" placeholder="Enter Last Name " required>
 
                                     </div>
                                 </div>
@@ -83,7 +83,7 @@
                                     </div>
                                     <div class="col-md-4 form-group">
                                         <label for="" class="form-label">Contact Number<sup class="text-danger">*</sup></label>
-                                        <input type="tel" name="contact_number" class="form-control" id="contact_number" placeholder="Enter Contact Number " required>
+                                        <input type="tel" name="contact_no" class="form-control" id="contact_no" placeholder="Enter Contact Number " required>
 
                                     </div>
                                 </div>
@@ -120,7 +120,7 @@
                                     <div class="col-md-4">
                                         <div class="form-group">
                                             <label>District</label>
-                                            <select name="block" class="form-control" id="discrict">
+                                            <select name="block" class="form-control" id="district">
                                                 <option value="select">Select</option>
                                             </select>
                                         </div>
@@ -152,7 +152,7 @@
 
                                 <div class="row">
                                     <div class="col-md-12 d-flex justify-content-center" id="">
-                                        <button type="button" class="btn btn-info my-2" id="">Submit</button>
+                                        <button type="button" class="btn btn-info my-2" id="submit">Submit</button>
                                     </div>
                                 </div>
                             </div>
@@ -165,6 +165,14 @@
 </div>
 <!-- ./wrapper -->
 <?php include './include-common-scripts.php';?>
+
+<script src="./assets/js/filter/anganwadiOpstionList.js"></script>
+<script src="./assets/js/filter/userRegister.js"></script>
+
+<script>
+    userRegister();
+    stateOptionsSet();
+</script>
 </body>
 
 </html>

@@ -36,7 +36,7 @@
             <!-- Main content -->
             <section class="content">
                 <div class="container-fluid text-uppercase">
-                    <form id="UserFormData" action="">
+                    <form id="studentFormData" action="">
                         <!-- SELECT2 EXAMPLE -->
                         <div class="card card-default">
                             <div class="card-header">
@@ -50,7 +50,7 @@
                                     <div class="col-md-4">
                                         <div class="form-group">
                                             <label for="Aganvadi" class="form-label">Aganvadi Kendra<sup>*</sup></label>
-                                            <select name="Aganvadi" class="form-control" id="" required>
+                                            <select name="Aganvadi" class="form-control" id="name" required>
                                                 <option value="select">Select</option>
                                             </select>
                                         </div>
@@ -74,28 +74,28 @@
                                 <div class="row pt-3">
                                     <div class="col-md-4 form-group">
                                         <label for="" class="form-label">First Name<sup class="text-danger">*</sup></label>
-                                        <input type="text" name="name" class="form-control" id="name" placeholder="Enter First Name " required>
+                                        <input type="text" name="f_name" class="form-control" id="f_name" placeholder="Enter First Name " required>
 
                                     </div>
                                     <div class="col-md-4 form-group">
                                         <label for="" class="form-label">Middle Name<sup class="text-danger">*</sup></label>
-                                        <input type="text" name="middle_name" class="form-control" id="middle_name" placeholder="Enter Middle Name " required>
+                                        <input type="text" name="m_name" class="form-control" id="m_name" placeholder="Enter Middle Name " required>
 
                                     </div>
                                     <div class="col-md-4 form-group">
                                         <label for="" class="form-label">Last Name<sup class="text-danger">*</sup></label>
-                                        <input type="text" name="last_name" class="form-control" id="last_name" placeholder="Enter Last Name " required>
+                                        <input type="text" name="l_name" class="form-control" id="l_name" placeholder="Enter Last Name " required>
                                     </div>
                                 </div>
 
                                 <div class="row">
                                     <div class="col-md-4 form-group">
                                         <label for="" class="form-label">Mother Name<sup class="text-danger">*</sup></label>
-                                        <input type="text" name="last_name" class="form-control" id="last_name" placeholder="Enter Mother Name " required>
+                                        <input type="text" name="mother_name" class="form-control" id="mother_name" placeholder="Enter Mother Name " required>
                                     </div>
                                     <div class="col-md-4 form-group">
                                         <label for="" class="form-label">Father Name<sup class="text-danger">*</sup></label>
-                                        <input type="text" name="" class="form-control" id="" placeholder="Enter Father Name " required>
+                                        <input type="text" name="father_name" class="form-control" id="father_name" placeholder="Enter Father Name " required>
                                     </div>
                                     <div class="col-md-4 form-group">
                                         <label for="" class="form-label">Date Of Birth<sup class="text-danger">*</sup></label>
@@ -108,7 +108,7 @@
                                     <div class="col-md-4">
                                         <div class="form-group">
                                             <label for="state" class="form-label">Gender<sup>*</sup></label>
-                                            <select name="state" class="form-control" id="">
+                                            <select name="gender" class="form-control" id="gender">
                                                 <option value="select">Select</option>
                                                 <option value="Male">Male</option>
                                                 <option value="Female">Female</option>
@@ -117,21 +117,21 @@
                                     </div>
                                     <div class="col-md-4 form-group">
                                         <label for="" class="form-label">Joining Date to Aganwadi<sup class="text-danger">*</sup></label>
-                                        <input type="date" name="date" class="form-control" id="" placeholder=" " required>
+                                        <input type="date" name="join_date" class="form-control" id="join_date" placeholder=" " required>
                                     </div>
                                     <div class="col-md-4 form-group">
                                         <label for="" class="form-label">Pass out Date from Aganwadi<sup class="text-danger">*</sup></label>
-                                        <input type="date" name="date" class="form-control" id="" placeholder=" " required>
+                                        <input type="date" name="pass_date" class="form-control" id="pass_date" placeholder=" " required>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-md-4 form-group">
                                         <label for="" class="form-label">Joining Date Photo<sup class="text-danger">*</sup></label>
-                                        <input type="file" name="file" class="form-control" id="" placeholder=" " required accept="image/*">
+                                        <input type="file" name="join_photo" class="form-control" id="join_photo" placeholder=" " required accept="image/*">
                                     </div>
                                     <div class="col-md-4 form-group">
                                         <label for="" class="form-label">Pass out Date Photo<sup class="text-danger">*</sup></label>
-                                        <input type="file" name="file" class="form-control" id="" placeholder=" " required accept="image/*">
+                                        <input type="file" name="pass_photo" class="form-control" id="pass_photo" placeholder=" " required accept="image/*">
                                     </div>
                                 </div>
 
@@ -180,12 +180,10 @@
                                         <label for="" class="form-label">ZIP CODE<sup>*</sup></label>
                                         <input type="number" name="zip_code" class="form-control" id="zip_code" placeholder="enter zip-code" required>
                                     </div>
-
                                 </div>
-
                                 <div class="row">
                                     <div class="col-md-12 d-flex justify-content-center" id="">
-                                        <button type="button" class="btn btn-info my-2" id="">Submit</button>
+                                        <button type="button" class="btn btn-info my-2" id="submit">Submit</button>
                                     </div>
                                 </div>
                             </div>
@@ -198,6 +196,15 @@
 </div>
 <!-- ./wrapper -->
 <?php include './include-common-scripts.php';?>
+
+<script src="./assets/js/filter/anganwadiOpstionList.js"></script>
+<script src="./assets/js/filter/studentRegister.js"></script>
+
+<script>
+    stateOptionsSet();
+    aganwadiOpstionList();
+    studentRegister();
+</script>
 </body>
 
 </html>
