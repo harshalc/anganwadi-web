@@ -144,11 +144,27 @@
 <?php include './include-common-scripts.php';?>
 <script src="./assets/js/filter/anganwadiOpstionList.js"></script>
 <script src="./assets/js/filter/anganwadiRegister.js"></script>
+<script src="./assets/js/filter/updateaganwadi.js"></script>
+<script src="./assets/js/filter/getQueryParamValue.js"></script>
+
+
+<script>
+    (() => {
+        let id = getQueryParamValue("id")
+       
+        if (!id) {
+            anganwadiRegister();
+            return
+        }
+        updateaganwadi(id)
+    })()
+
+</script>
 
 <script>
     praklpOpstionList();
     bitOpstionList();
-    anganwadiRegister();
+    // anganwadiRegister();
     stateOptionsSet();
     
 </script>

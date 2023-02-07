@@ -86,7 +86,7 @@
     <?php include './include-common-scripts.php';?>
     <?php include './include-datatable-scripts.php';?>
 
-    <script src="./assets/js/filter/bitGEtList.js"></script>
+    <script src="./assets/js/filter/bitGetList.js"></script>
 <script>
   $(function () {
     $("#example1").DataTable({

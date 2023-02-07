@@ -13,3 +13,4 @@ const praklpaRegister = (json) => {
     alert("Form submitted successfully");
   });
 };
+

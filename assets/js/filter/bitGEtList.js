@@ -15,6 +15,7 @@ const bitGEtList = () => {
                                     }" ><i class="fas fa-trash text-danger mr-1"></i></a></span></td> </tr>
         `;
   });
+  
   bitList.innerHTML = bit.join("");
   data?.forEach((data) => {
     console.log(data);

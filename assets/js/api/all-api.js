@@ -26,6 +26,12 @@
 //   };
 
 // Praklpa API
+
+
+const stringifyData=(data)=>{
+  return JSON.stringify(data)
+}
+
 const praklpaApi = {
   register: function (json) {
     const stringifyObj = JSON.stringify(json);
@@ -38,6 +44,13 @@ const praklpaApi = {
   getList: function () {
     return FetchApi("", `/api_anganwadi/public/prakalpa/listAll`, "GET");
   },
+  get:function(id){
+    return  FetchApi("", `/api_anganwadi/public/prakalpa/${id}`, "GET");
+  },
+  update:function(id,json){
+    console.log(id,json);
+      return FetchApi2(stringifyData(json),`/api_anganwadi/public/prakalpa/update/${id}`,"PATCH")
+  }
 };
 
 // Bit API
@@ -50,6 +63,12 @@ const bitApi = {
   getList: function () {
     return FetchApi("", `/api_anganwadi/public/bit/listAll`, "GET");
   },
+  get:function(id){
+    return  FetchApi("", `/api_anganwadi/public/bit/${id}`, "GET");
+  },
+  update:function(id,json){
+      return FetchApi2(stringifyData(json),`/api_anganwadi/public/bit/update/${id}`,"PATCH")
+  }
 };
 
 //Aganwadi API
@@ -66,6 +85,13 @@ const aganwadiApi = {
   GetList: function () {
     return FetchApi("", `/api_anganwadi/public/anganwadi/listAll`, "GET");
   },
+
+  get:function(id){
+    return  FetchApi("", `/api_anganwadi/public/anganwadi/${id}`, "GET");
+  },
+  update:function(id,json){
+      return FetchApi2(stringifyData(json),`/api_anganwadi/public/bit/update/${id}`,"PATCH")
+  }
 };
 
 // Address
@@ -163,7 +189,4 @@ const DeleteAganwadiUserAPI = (id) => {
   return FetchApi("", `/api_anganwadi/public/anganwadi_user/${id}`, "DELETE");
 };
 
-
-
-
-
+/* UPDATE API */

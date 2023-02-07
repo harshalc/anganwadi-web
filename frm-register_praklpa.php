@@ -70,11 +70,24 @@
 
 
 <script src="./assets/js/filter/praklpaRegister.js"></script>
+<script src="./assets/js/filter/getQueryParamValue.js"></script>
+<script src="./assets/js/filter/updatePraklpa.js"></script>
 
 <script>
-    praklpaRegister();
-   
+    (() => {
+        let id = getQueryParamValue("id")
+       
+        if (!id) {
+            praklpaRegister();
+            return
+        }
+        updatePraklpa(id)
+    })()
+
 </script>
+<!-- <script>
+     praklpaRegister();
+</script> -->
        
 </body>
 
