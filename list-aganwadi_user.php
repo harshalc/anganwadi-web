@@ -60,11 +60,13 @@
                                                     <th>Contact No.</th>
                                                     <th>Email</th>
                                                     <th>Address</th>
+                                                    <th>Update / Delete</th>
                                                    
                                                 </tr>
                                             </thead>
                                             <tbody id="aganwadiuserList">
                                                 <tr>
+                                                    <td></td>
                                                     <td></td>
                                                     <td></td>
                                                     <td></td>

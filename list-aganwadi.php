@@ -60,10 +60,12 @@
                                                     <th>Bit Name</th>
                                                     <th>Year</th>
                                                     <th>Address</th>
+                                                    <th>Update / Delete</th>
                                                 </tr>
                                             </thead>
                                             <tbody id="aganwadiList">
                                                 <tr>
+                                                    <td></td>
                                                     <td></td>
                                                     <td></td>
                                                     <td></td>

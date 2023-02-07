@@ -55,10 +55,12 @@
                                                 <tr>
                                                     <th>Sr.No</th>
                                                     <th>Prakalpa Name</th>
+                                                    <th>Update / Delete</th>
                                                 </tr>
                                             </thead>
                                             <tbody id="praklpaList">
                                                 <tr>
+                                                    <td></td>
                                                     <td></td>
                                                     <td></td>
                                                 </tr>

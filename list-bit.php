@@ -55,10 +55,12 @@
                                                 <tr>
                                                     <th>Sr.No</th>
                                                     <th>Bit Name</th>
+                                                    <th>Update / Delete</th>
                                                 </tr>
                                             </thead>
                                             <tbody id="bitList">
                                                 <tr>
+                                                    <td></td>
                                                     <td></td>
                                                     <td></td>
                                                 </tr>
