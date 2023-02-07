@@ -1,6 +1,5 @@
 const aganwadiGetList=()=>{
     const {data} = aganwadiApi.GetList()
-        console.log(data,"get lis datat");
     
         const aganwadiList=document.querySelector("#aganwadiList")
     

@@ -63,7 +63,7 @@
                                                    
                                                 </tr>
                                             </thead>
-                                            <tbody id="addUser">
+                                            <tbody id="aganwadiuserList">
                                                 <tr>
                                                     <td></td>
                                                     <td></td>
@@ -95,6 +95,9 @@
 
     <?php include './include-common-scripts.php';?>
     <?php include './include-datatable-scripts.php';?>
+
+    <script src="./assets/js/filter/aganwadiUserGetList.js"></script>
+
     <script>
         $(function() {
             $("#example1").DataTable({
@@ -113,6 +116,11 @@
                 "responsive": true,
             });
         });
+    </script>
+    
+    <script>
+        aganwadiUserGetList();
+
     </script>
 </body>
 

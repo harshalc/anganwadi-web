@@ -55,19 +55,11 @@
                                                     <th>Sr.No</th>
                                                     <th>Role</th>
                                                     <th>Name</th>
-                                                    <th>Prakalpa Name</th>
-                                                    <th>Bit Name</th>
-                                                    <th>Aganawadi Kendra</th>
-                                                    <th>Aganawadi No.</th>
                                                     <th>Address</th>
                                                 </tr>
                                             </thead>
-                                            <tbody id="addUser">
+                                            <tbody id="UserList">
                                                 <tr>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
                                                     <td></td>
                                                     <td></td>
                                                     <td></td>
@@ -95,6 +87,7 @@
     <!-- ./wrapper -->
     <?php include './include-common-scripts.php';?>
     <?php include './include-datatable-scripts.php';?>
+    <script src="./assets/js/filter/userGetList.js"></script>
 <script>
   $(function () {
     $("#example1").DataTable({
@@ -111,6 +104,10 @@
       "responsive": true,
     });
   });
+
+</script>
+<script>
+    UserGetList();
 </script>
 </body>
 

@@ -12,9 +12,8 @@ const praklpaRegister =(json) =>{
         title:title.value,
 
     }
-    console.log(user,".......................");
     const response= praklpaApi.register(user);
-    console.log(response,"----------------");
+    alert("Form submitted successfully");
 
     })
 }

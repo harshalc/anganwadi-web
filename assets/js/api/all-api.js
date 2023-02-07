@@ -82,6 +82,40 @@ const aganwadiApi = {
   },
 };
 
+// Student Api
+
+const aganwadiUserApi = {
+  register: function (json) {
+    const stringifyObj = JSON.stringify(json);
+    return FetchApi2(stringifyObj, `/api_anganwadi/public/anganwadi_user`, "POST");
+  },
+    GetList: function () {
+    return FetchApi("", `/api_anganwadi/public/anganwadi_user`, "GET");
+  },
+};
+
+
+const studentApi = {
+  register: function (json) {
+    const stringifyObj = JSON.stringify(json);
+    return FetchApi2(stringifyObj, `/api_anganwadi/public/student/create`, "POST");
+  },
+    GetList: function () {
+    return FetchApi("", `/api_anganwadi/public/students/listAll`, "GET");
+  },
+};
+
+//user Api
+
+const userApi = {
+  register: function (json) {
+    const stringifyObj = JSON.stringify(json);
+    return FetchApi2(stringifyObj, `/api_anganwadi/public/user/create`, "POST");
+  },
+    GetList: function () {
+    return FetchApi("", `/api_anganwadi/public/users/listAll`, "GET");
+  },
+};
 
 
 

@@ -21,8 +21,7 @@ console.log("swapnil ncndcknkd");
     console.log(user," Data User");
 
     const response = aganwadiApi.register(user);
-    console.log(response, "data respones");
-
-    alert("890")
+    
+    alert("Form submitted successfully");
   });
 };
