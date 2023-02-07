@@ -56,10 +56,12 @@
                                                     <th>Role</th>
                                                     <th>Name</th>
                                                     <th>Address</th>
+                                                    <th>Update / Delete</th>
                                                 </tr>
                                             </thead>
                                             <tbody id="UserList">
                                                 <tr>
+                                                    <td></td>
                                                     <td></td>
                                                     <td></td>
                                                     <td></td>
