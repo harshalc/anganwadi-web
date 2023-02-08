@@ -10,6 +10,6 @@ const anganwadiRegister = (json) => {
       ...anganwadiRegister,
     };
     const response = aganwadiApi.register(user);
-    alert("Form submitted successfully");
+    // alert("Form submitted successfully");
   });
 };

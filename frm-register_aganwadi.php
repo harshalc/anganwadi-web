@@ -147,7 +147,6 @@
 <script src="./assets/js/filter/updateaganwadi.js"></script>
 <script src="./assets/js/filter/getQueryParamValue.js"></script>
 
-
 <script>
     (() => {
         let id = getQueryParamValue("id")

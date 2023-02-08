@@ -90,37 +90,10 @@ const aganwadiApi = {
     return  FetchApi("", `/api_anganwadi/public/anganwadi/${id}`, "GET");
   },
   update:function(id,json){
-      return FetchApi2(stringifyData(json),`/api_anganwadi/public/bit/update/${id}`,"PATCH")
+      return FetchApi2(stringifyData(json),`/api_anganwadi/public/anganwadi/update/${id}`,"PATCH")
   }
 };
 
-// Address
-const addressApi = {
-  state: function () {
-    return FetchApi("", `/demographic-info/public/states/all`, "GET");
-  },
-  district: function (state_code) {
-    return FetchApi(
-      "",
-      `/demographic-info/public/districts/${state_code}`,
-      "GET"
-    );
-  },
-  block: function (district_code) {
-    return FetchApi(
-      "",
-      `/demographic-info/public/blocks/${district_code}`,
-      "GET"
-    );
-  },
-  village: function (block_code) {
-    return FetchApi(
-      "",
-      `/demographic-info/public/block/get/villages/${block_code}`,
-      "GET"
-    );
-  },
-};
 
 // Student Api
 
@@ -189,4 +162,30 @@ const DeleteAganwadiUserAPI = (id) => {
   return FetchApi("", `/api_anganwadi/public/anganwadi_user/${id}`, "DELETE");
 };
 
-/* UPDATE API */
+// All Address
+const addressApi = {
+  state: function () {
+    return FetchApi("", `/demographic-info/public/states/all`, "GET");
+  },
+  district: function (state_code) {
+    return FetchApi(
+      "",
+      `/demographic-info/public/districts/${state_code}`,
+      "GET"
+    );
+  },
+  block: function (district_code) {
+    return FetchApi(
+      "",
+      `/demographic-info/public/blocks/${district_code}`,
+      "GET"
+    );
+  },
+  village: function (block_code) {
+    return FetchApi(
+      "",
+      `/demographic-info/public/block/get/villages/${block_code}`,
+      "GET"
+    );
+  },
+};
