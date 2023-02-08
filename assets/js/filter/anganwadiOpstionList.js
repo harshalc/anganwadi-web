@@ -45,6 +45,7 @@ const bitOpstionList = () => {
   //district
 
   const districtOptionsSet = (state_code,selectedDistrictCode) => {
+    console.log("statet code ",state_code);
     const { data } = addressApi.district(state_code);
     const DistrictName = document.querySelector("#district");
     const blocksName = document.querySelector("#block");
@@ -52,6 +53,7 @@ const bitOpstionList = () => {
     const villageName = document.querySelector("#village");
     const optionArray = [];
     optionArray.push(` <option  value="" >Select</option>`);
+    console.log("district option set data",data);
     data.forEach(({district_code,district_title}) => {
       const option = `<option value=${district_code} ${selectedDistrictCode==district_code?"selected":""}>
       ${district_title}</option>`;
@@ -73,7 +75,8 @@ const bitOpstionList = () => {
     const villageName = document.querySelector("#village");
     const optionArray = [];
     optionArray.push(` <option  value="">Select</option>`);
-    data.forEach((block) => {
+    console.log("data-----",data);
+  data.forEach((block) => {
       const options = `<option value=${block.block_code} ${
         blockCode == block.block_code ? "selected" : ""
       }>${block.block_title}</option>`;
