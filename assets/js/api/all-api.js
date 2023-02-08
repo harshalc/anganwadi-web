@@ -27,10 +27,9 @@
 
 // Praklpa API
 
-
-const stringifyData=(data)=>{
-  return JSON.stringify(data)
-}
+const stringifyData = (data) => {
+  return JSON.stringify(data);
+};
 
 const praklpaApi = {
   register: function (json) {
@@ -44,13 +43,17 @@ const praklpaApi = {
   getList: function () {
     return FetchApi("", `/api_anganwadi/public/prakalpa/listAll`, "GET");
   },
-  get:function(id){
-    return  FetchApi("", `/api_anganwadi/public/prakalpa/${id}`, "GET");
+  get: function (id) {
+    return FetchApi("", `/api_anganwadi/public/prakalpa/${id}`, "GET");
   },
-  update:function(id,json){
-    console.log(id,json);
-      return FetchApi2(stringifyData(json),`/api_anganwadi/public/prakalpa/update/${id}`,"PATCH")
-  }
+  update: function (id, json) {
+    console.log(id, json);
+    return FetchApi2(
+      stringifyData(json),
+      `/api_anganwadi/public/prakalpa/update/${id}`,
+      "PATCH"
+    );
+  },
 };
 
 // Bit API
@@ -63,12 +66,16 @@ const bitApi = {
   getList: function () {
     return FetchApi("", `/api_anganwadi/public/bit/listAll`, "GET");
   },
-  get:function(id){
-    return  FetchApi("", `/api_anganwadi/public/bit/${id}`, "GET");
+  get: function (id) {
+    return FetchApi("", `/api_anganwadi/public/bit/${id}`, "GET");
   },
-  update:function(id,json){
-      return FetchApi2(stringifyData(json),`/api_anganwadi/public/bit/update/${id}`,"PATCH")
-  }
+  update: function (id, json) {
+    return FetchApi2(
+      stringifyData(json),
+      `/api_anganwadi/public/bit/update/${id}`,
+      "PATCH"
+    );
+  },
 };
 
 //Aganwadi API
@@ -86,31 +93,45 @@ const aganwadiApi = {
     return FetchApi("", `/api_anganwadi/public/anganwadi/listAll`, "GET");
   },
 
-  get:function(id){
-    return  FetchApi("", `/api_anganwadi/public/anganwadi/${id}`, "GET");
+  get: function (id) {
+    return FetchApi("", `/api_anganwadi/public/anganwadi/${id}`, "GET");
   },
-  update:function(id,json){
-      return FetchApi2(stringifyData(json),`/api_anganwadi/public/anganwadi/update/${id}`,"PATCH")
-  }
+  update: function (id, json) {
+    return FetchApi2(
+      stringifyData(json),
+      `/api_anganwadi/public/anganwadi/update/${id}`,
+      "PATCH"
+    );
+  },
 };
 
-
-// Student Api
+// Aganwadi User Api
 
 const aganwadiUserApi = {
   register: function (json) {
     const stringifyObj = JSON.stringify(json);
     return FetchApi2(
       stringifyObj,
-      `/api_anganwadi/public/anganwadi_user`,
+      `/api_anganwadi/public/anganwadi_user/create`,
       "POST"
     );
   },
   GetList: function () {
     return FetchApi("", `/api_anganwadi/public/anganwadi_user`, "GET");
   },
+  get: function (id) {
+    return FetchApi("", `/api_anganwadi/public/anganwadi_user/${id}`, "GET");
+  },
+  update: function (id, json) {
+    return FetchApi2(
+      stringifyData(json),
+      `/api_anganwadi/public/anganwadi_user/update/${id}`,
+      "PATCH"
+    );
+  },
 };
 
+// Student Api
 const studentApi = {
   register: function (json) {
     const stringifyObj = JSON.stringify(json);
@@ -123,6 +144,17 @@ const studentApi = {
   GetList: function () {
     return FetchApi("", `/api_anganwadi/public/students/listAll`, "GET");
   },
+
+  get: function (id) {
+    return FetchApi("", `/api_anganwadi/public/student/${id}`, "GET");
+  },
+  update: function (id, json) {
+    return FetchApi2(
+      stringifyData(json),
+      `/api_anganwadi/public/student/update/${id}`,
+      "PATCH"
+    );
+  },
 };
 
 //user Api
@@ -134,6 +166,16 @@ const userApi = {
   },
   GetList: function () {
     return FetchApi("", `/api_anganwadi/public/users/listAll`, "GET");
+  },
+  get: function (id) {
+    return FetchApi("", `/api_anganwadi/public/user/${id}`, "GET");
+  },
+  update: function (id, json) {
+    return FetchApi2(
+      stringifyData(json),
+      `/api_anganwadi/public/user/update/${id}`,
+      "PATCH"
+    );
   },
 };
 

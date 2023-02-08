@@ -36,7 +36,7 @@
             <!-- Main content -->
             <section class="content">
                 <div class="container-fluid text-uppercase">
-                    <form id="studentFormData" action="">
+                    <form id="UserFormData" action="">
                         <!-- SELECT2 EXAMPLE -->
                         <div class="card card-default">
                             <div class="card-header">
@@ -55,16 +55,6 @@
                                             </select>
                                         </div>
                                     </div>
-                                    <!-- <div class="col-md-4">
-                                        <div class="form-group">
-                                            <label>Year</label>
-                                            <select name="block" class="form-control" id="">
-                                                <option value="select">Select</option>
-                                                <option value="select">2023-2024</option>
-                                                <option value="select">2024-2025</option>
-                                            </select>
-                                        </div>
-                                    </div> -->
                                 </div>
 
                                 <div class="card-header">
@@ -99,7 +89,7 @@
                                     </div>
                                     <div class="col-md-4 form-group">
                                         <label for="" class="form-label">Date Of Birth<sup class="text-danger">*</sup></label>
-                                        <input type="date" name="dob" class="form-control" id="" placeholder=" " required>
+                                        <input type="date" name="dob" class="form-control" id="dob" placeholder=" " required>
                                     </div>
                                 </div>
 
@@ -199,11 +189,25 @@
 
 <script src="./assets/js/filter/anganwadiOpstionList.js"></script>
 <script src="./assets/js/filter/studentRegister.js"></script>
+<script src="./assets/js/filter/updateStudent.js"></script>
 
 <script>
     stateOptionsSet();
     aganwadiOpstionList();
-    studentRegister();
+    
+</script>
+
+<script>
+    (() => {
+        let id = getQueryParamValue("id")
+       
+        if (!id) {
+            studentRegister();
+            return
+        }
+        updateStudent(id)
+    })()
+
 </script>
 </body>
 

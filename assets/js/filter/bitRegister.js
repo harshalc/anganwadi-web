@@ -8,5 +8,7 @@ const bitRegister=(json)=>{
     }   
     const response= bitApi.register(user);
     alert("Form submitted successfully");
+
+    window.location.href="frm-register_bit.php"
     })
 }

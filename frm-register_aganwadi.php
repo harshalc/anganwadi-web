@@ -5,12 +5,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>AdminKIT</title>
-  <?php include './include-common-style.php';?>
+    <?php include './include-common-style.php'; ?>
 </head>
-<body class="hold-transition sidebar-mini layout-fixed">
-<div class="wrapper">
 
-  <?php include './include-sidebar.php';?>
+<body class="hold-transition sidebar-mini layout-fixed">
+    <div class="wrapper">
+
+        <?php include './include-sidebar.php'; ?>
 
         <!-- Content Wrapper. Contains page content -->
         <div class="content-wrapper">
@@ -48,13 +49,13 @@
                                 <div class="row">
                                     <div class="col-md-4 form-group">
                                         <label for="Prakalpa" class="form-label">Prakalpa Name<sup>*</sup></label>
-                                        <select name="title" class="form-control" id="title" required>
+                                        <select name="prakalpa_id" class="form-control" id="prakalpa_id" required>
                                             <option value="select">Select</option>
                                         </select>
                                     </div>
                                     <div class="col-md-4 form-group">
                                         <label for="Bit" class="form-label">Bit Name<sup>*</sup></label>
-                                        <select name="title" class="form-control" id="title1" required>
+                                        <select name="bit_id" class="form-control" id="bit_id" required>
                                             <option value="select">Select</option>
                                         </select>
                                     </div>
@@ -72,17 +73,16 @@
                                     </div>
                                     <div class="col-md-4 form-group">
                                         <label for="Prakalpa" class="form-label">Year<sup>*</sup></label>
-                                        <select name="Year" class="form-control" id="year" required>
+                                        <select name="year" class="form-control" id="year" required>
                                             <option value="select">Select</option>
-                                            <option value="select">2023-2024</option>
-                                            <option value="select">2024-2025</option>
+                                            <option value="2023-2024">2023-2024</option>
+                                            <option value="2024-2025">2024-2025</option>
                                         </select>
                                     </div>
                                 </div>
                                 <div class="card-header">
                                     <h3 class="card-title">Aganwadi Address</h3>
                                 </div>
-
                                 <div class="row pt-3">
                                     <div class="col-md-4">
                                         <div class="form-group">
@@ -139,34 +139,32 @@
             <!-- /.content -->
         </div>
         <?php include './include-copy-right.php' ?>
-</div>
-<!-- ./wrapper -->
-<?php include './include-common-scripts.php';?>
-<script src="./assets/js/filter/anganwadiOpstionList.js"></script>
-<script src="./assets/js/filter/anganwadiRegister.js"></script>
-<script src="./assets/js/filter/updateaganwadi.js"></script>
-<script src="./assets/js/filter/getQueryParamValue.js"></script>
+    </div>
+    <!-- ./wrapper -->
+    <?php include './include-common-scripts.php'; ?>
+    <script src="./assets/js/filter/anganwadiOpstionList.js"></script>
+    <script src="./assets/js/filter/anganwadiRegister.js"></script>
+    <script src="./assets/js/filter/updateaganwadi.js"></script>
+  
+    <script>
+        praklpOpstionList();
+        bitOpstionList();
+        // anganwadiRegister();
+        stateOptionsSet();
+    </script>
+    <script>
+        (() => {
+            let id = getQueryParamValue("id")
 
-<script>
-    (() => {
-        let id = getQueryParamValue("id")
-       
-        if (!id) {
-            anganwadiRegister();
-            return
-        }
-        updateaganwadi(id)
-    })()
+            if (!id) {
+                anganwadiRegister();
+                return
+            }
+            updateaganwadi(id)
+        })()
+    </script>
 
-</script>
 
-<script>
-    praklpOpstionList();
-    bitOpstionList();
-    // anganwadiRegister();
-    stateOptionsSet();
-    
-</script>
 </body>
 
 </html>

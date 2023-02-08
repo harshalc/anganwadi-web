@@ -12,7 +12,7 @@ const aganwadiOpstionList = () => {
 
 //Student Register
 const studentRegister = (json) => {
-  const studentFormData = document.querySelector("#studentFormData");
+  const studentFormData = document.querySelector("#UserFormData");
   const submit = document.querySelector("#submit");
   submit.addEventListener("click", (e) => {
     e.preventDefault();
@@ -25,5 +25,6 @@ const studentRegister = (json) => {
     };
     const response = studentApi.register(user);
     alert("Form submitted successfully");
+    window.location.href="list-students.php"
   });
 };
