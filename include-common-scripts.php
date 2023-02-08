@@ -13,3 +13,5 @@
 <script src="assets/js/api/fetchApi.js"></script>
 <script src="assets/js/api/all-api.js"></script>
 
+<script src="./assets/js/filter/getQueryParamValue.js"></script>
+

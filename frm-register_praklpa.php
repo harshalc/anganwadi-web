@@ -70,7 +70,7 @@
 
 
 <script src="./assets/js/filter/praklpaRegister.js"></script>
-<script src="./assets/js/filter/getQueryParamValue.js"></script>
+<!-- <script src="./assets/js/filter/getQueryParamValue.js"></script> -->
 <script src="./assets/js/filter/updatePraklpa.js"></script>
 
 <script>

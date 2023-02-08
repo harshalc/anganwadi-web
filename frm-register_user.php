@@ -5,13 +5,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>AdminKIT</title>
-   
-    <?php include './include-common-style.php';?>
-</head>
-<body class="hold-transition sidebar-mini layout-fixed">
-<div class="wrapper">
 
-  <?php include './include-sidebar.php';?>
+    <?php include './include-common-style.php'; ?>
+</head>
+
+<body class="hold-transition sidebar-mini layout-fixed">
+    <div class="wrapper">
+
+        <?php include './include-sidebar.php'; ?>
 
         <!-- Content Wrapper. Contains page content -->
         <div class="content-wrapper">
@@ -47,11 +48,11 @@
                                 <div class="row">
                                     <div class="col-md-4 form-group">
                                         <label for="" class="form-label">Role<sup class="text-danger">*</sup></label>
-                                        <select name="role" class="form-control" id="role_id" required>
+                                        <select name="role_id" class="form-control" id="role_id" required>
                                             <option value="select">Select</option>
-                                            <option value="select">User 1</option>
-                                            <option value="select">User 2</option>
-                                            <option value="select">User 3</option>
+                                            <option value="User 1">User 1</option>
+                                            <option value="User 2">User 2</option>
+                                            <option value="User 3">User 3</option>
                                         </select>
                                     </div>
                                 </div>
@@ -73,8 +74,6 @@
 
                                     </div>
                                 </div>
-
-
                                 <div class="row">
                                     <div class="col-md-4 form-group">
                                         <label for="" class="form-label">Email<sup class="text-danger">*</sup></label>
@@ -89,9 +88,12 @@
                                 </div>
                                 <hr>
                                 <div class="row">
-                                    <!-- <div class="col-md-4">
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-4">
                                         <div class="form-group">
-                                            <label for="state" class="form-label">STATE<sup>*</sup></label>
+                                            <label>STATE</label>
                                             <select name="state" class="form-control" id="state">
                                                 <option value="select">Select</option>
                                             </select>
@@ -99,28 +101,8 @@
                                     </div>
                                     <div class="col-md-4">
                                         <div class="form-group">
-                                            <label for="" class="form-label">DISTRICT<sup>*</sup></label>
-                                            <select name="district" class="form-control" id="district">
-                                                <option value="select">Select</option>
-                                            </select>
-                                        </div>
-                                    </div> -->
-                                    
-                                </div>
-
-                                <div class="row">
-                                    <div class="col-md-4">
-                                        <div class="form-group">
-                                            <label>STATE</label>
-                                            <select name="block" class="form-control" id="state">
-                                                <option value="select">Select</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="form-group">
                                             <label>District</label>
-                                            <select name="block" class="form-control" id="district">
+                                            <select name="district" class="form-control" id="district">
                                                 <option value="select">Select</option>
                                             </select>
                                         </div>
@@ -133,7 +115,7 @@
                                             </select>
                                         </div>
                                     </div>
-                                    
+
                                     <div class="col-md-4">
                                         <div class="form-group">
                                             <label>VILLAGE</label>
@@ -162,17 +144,29 @@
             <!-- /.content -->
         </div>
         <?php include './include-copy-right.php' ?>
-</div>
-<!-- ./wrapper -->
-<?php include './include-common-scripts.php';?>
+    </div>
+    <!-- ./wrapper -->
+    <?php include './include-common-scripts.php'; ?>
 
-<script src="./assets/js/filter/anganwadiOpstionList.js"></script>
-<script src="./assets/js/filter/userRegister.js"></script>
+    <script src="./assets/js/filter/anganwadiOpstionList.js"></script>
+    <script src="./assets/js/filter/userRegister.js"></script>
+    <script src="./assets/js/filter/updateUser.js"></script>
 
-<script>
-    userRegister();
-    stateOptionsSet();
-</script>
+    <script>
+        // userRegister();
+        stateOptionsSet();
+    </script>
+    <script>
+        (() => {
+            let id = getQueryParamValue("id")
+
+            if (!id) {
+                userRegister();
+                return
+            }
+            updateUser(id)
+        })()
+    </script>
 </body>
 
 </html>

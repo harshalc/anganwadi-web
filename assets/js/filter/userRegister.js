@@ -10,5 +10,6 @@ const userRegister = (json) => {
     };
     const response = userApi.register(user);
     alert("Form submitted successfully");
+    window.location.href="list-user.php"
   });
 };

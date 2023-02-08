@@ -14,7 +14,8 @@ const updateaganwadi = (id) => {
     };
     const response =  aganwadiApi.update(id,user);
     alert("Form Update data successfully");
+    window.location.href="list-aganwadi.php"
   });
-  
+
 };
 
