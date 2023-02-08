@@ -7,7 +7,7 @@ const praklpOpstionList = () => {
     const html = `<option value="${element.id}">${element.title}</option>`;
     optionset.push(html);
   });
-  document.querySelector("#title").innerHTML = optionset.join("");
+  document.querySelector("#prakalpa_id").innerHTML = optionset.join("");
 };
 
 const bitOpstionList = () => {
@@ -18,7 +18,7 @@ const bitOpstionList = () => {
       const html = `<option value="${element.id}">${element.title}</option>`;
       optionset.push(html);
     });
-    document.querySelector("#title1").innerHTML = optionset.join("");
+    document.querySelector("#bit_id").innerHTML = optionset.join("");
   };
   // State 
   const stateOptionsSet = (selectedStateCode) => {
@@ -28,8 +28,10 @@ const bitOpstionList = () => {
     const blocksName = document.querySelector("#block");
     const villageName = document.querySelector("#village");
     const optionArray = [];
+    console.log("selected code---------",selectedStateCode);
     optionArray.push(` <option value="" >Select states</option>`);
     data.forEach(({ state_code, state_title }) => {
+      console.log("state valuebbbbbbbbbbbbbbbbbbbb",state_code==selectedStateCode?"selected":"");
       const option = `<option value=${state_code} ${state_code==selectedStateCode?"selected":""}>${state_title}</option>`;
       optionArray.push(option);
     });
@@ -69,13 +71,14 @@ const bitOpstionList = () => {
   // Taluka 
 
   const blocksOptionsSet = (district_code, blockCode, isDisabled) => {
+    console.log("district code " ,district_code);
     const { data } = addressApi.block(district_code);
     const blocksName = document.querySelector("#block");
-    const grampanchayatName = document.querySelector("#grampanchayatName");
+    // const grampanchayatName = document.querySelector("#grampanchayatName");
     const villageName = document.querySelector("#village");
     const optionArray = [];
     optionArray.push(` <option  value="">Select</option>`);
-    console.log("data-----",data);
+    console.log("data-----*********",data);
   data.forEach((block) => {
       const options = `<option value=${block.block_code} ${
         blockCode == block.block_code ? "selected" : ""

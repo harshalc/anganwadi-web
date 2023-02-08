@@ -11,6 +11,13 @@ const setValuesForm=(data)=>{
             districtOptionsSet(data["state"],data[key])
             return;
         }
+        // if(key==="prakalpa_id"){
+        // selector.value=data[key];
+        // return
+        // }
+        // if(key==="bit_id"){
+        //     selector.value=data[key]
+        // }
         if(key=="block"){
             blocksOptionsSet(data["district"],data[key])
             return ;
