@@ -10,7 +10,6 @@ const aganwadiuserOpstionList = () => {
   document.querySelector("#anganwadi_id").innerHTML = optionset.join("");
   // optionset.innerHTML=html.join("");
 };
-
 //anganwadi User Register
 
 const anganwadiUserRegister = (json) => {
@@ -24,8 +23,8 @@ const anganwadiUserRegister = (json) => {
     const user = {
       ...anganwadiUserRegister,
     };
-
     const response = aganwadiUserApi.register(user);
     alert("Form submitted successfully");
+    window.location.href="list-user.php"
   });
 };

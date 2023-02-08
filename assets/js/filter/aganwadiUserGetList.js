@@ -13,7 +13,7 @@ const aganwadiUserGetList = () => {
       element?.village
     }</td>
         
-        <td class="text-center"><span><a href="frm-register_aganwadi_user.php?id=${
+        <td class="text-center"><span><a href="frm-aganwadi_user.php?id=${
           element.id
         }"><i class="fas fa-edit mr-3 text-primary"></i></a></span>
                                     <span><a id="deleteRow-${

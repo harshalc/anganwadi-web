@@ -27,7 +27,7 @@ const setValuesForm=(data)=>{
             villageOptionsSet(data["block"],data[key])
             return;
         }
-        // if(key=="photo"||key=="anotherphotoid")return
+        if(key=="join_photo"||key=="pass_photo")return
         else selector.value=data[key];  
     })
 }

@@ -11,5 +11,6 @@ const anganwadiRegister = (json) => {
     };
     const response = aganwadiApi.register(user);
     alert("Form submitted successfully");
+    window.location.href="list-aganwadi.php"
   });
 };

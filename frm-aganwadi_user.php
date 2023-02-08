@@ -70,7 +70,6 @@
                                     </div>
                                 </div>
 
-
                                 <div class="row">
                                     <div class="col-md-4 form-group">
                                         <label for="" class="form-label">Email<sup class="text-danger">*</sup></label>
@@ -155,10 +154,24 @@
     <?php include './include-common-scripts.php';?>
     <script src="./assets/js/filter/aganwadiUser.js"></script>
     <script src="./assets/js/filter/anganwadiOpstionList.js"></script>
+    <script src="./assets/js/filter/updateAnganwadiUser.js"></script>
+
     <script>
         aganwadiuserOpstionList();
         stateOptionsSet();
-        anganwadiUserRegister();
+        // anganwadiUserRegister();
+    </script>
+
+<script>
+        (() => {
+            let id = getQueryParamValue("id")
+
+            if (!id) {
+                anganwadiUserRegister();
+                return
+            }
+            updateAnganwadiUser(id)
+        })()
     </script>
 </body>
 

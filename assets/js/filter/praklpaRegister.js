@@ -11,6 +11,7 @@ const praklpaRegister = (json) => {
     };
     const response = praklpaApi.register(user);
     alert("Form submitted successfully");
+    window.location.href="list-prakalpa.php"
   });
 };
 

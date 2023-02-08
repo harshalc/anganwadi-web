@@ -11,5 +11,6 @@ const updatePraklpa = (id) => {
   const resp=praklpaApi.update(id,json);
   console.log("response ",resp);
   alert("Form Update successfully")
+  window.location.href="list-prakalpa.php";
   }) 
 }

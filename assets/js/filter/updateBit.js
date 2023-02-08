@@ -12,5 +12,6 @@ const updateBit = (id) => {
   console.log("response ",resp);
 
   alert("Form Update successfully")
+  window.location.href="frm-register_bit.php"
   }) 
 }
