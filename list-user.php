@@ -5,14 +5,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>AdminKIT</title>
-    <?php include './include-common-style.php';?>
-    <?php include './include-datatable-style.php';?>
-   
+    <?php include './include-common-style.php'; ?>
+    <?php include './include-datatable-style.php'; ?>
+
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed">
     <div class="wrapper">
-    <?php include './include-sidebar.php';?>
+        <?php include './include-sidebar.php'; ?>
 
         <!-- Content Wrapper. Contains page content -->
         <div class="content-wrapper">
@@ -37,7 +37,7 @@
             <!-- Main content -->
             <section class="content">
                 <div class="container-fluid">
-                <div class="row">
+                    <div class="row">
                         <div class="col-12">
                             <div class="card">
                                 <div class="card-body">
@@ -87,30 +87,38 @@
         <?php include './include-copy-right.php' ?>
     </div>
     <!-- ./wrapper -->
-    <?php include './include-common-scripts.php';?>
-    <?php include './include-datatable-scripts.php';?>
+    <?php include './include-common-scripts.php'; ?>
+    <?php include './include-datatable-scripts.php'; ?>
     <script src="./assets/js/filter/userGetList.js"></script>
-<script>
-  $(function () {
-    $("#example1").DataTable({
-      "responsive": true, "lengthChange": false, "autoWidth": false,
-      "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
-    }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
-    $('#example2').DataTable({
-      "paging": true,
-      "lengthChange": false,
-      "searching": false,
-      "ordering": true,
-      "info": true,
-      "autoWidth": false,
-      "responsive": true,
-    });
-  });
-
-</script>
-<script>
-    UserGetList();
-</script>
+    <script>
+        $(function() {
+            $("#example1").DataTable({
+                "responsive": true,
+                "lengthChange": false,
+                "autoWidth": false,
+                "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+            }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+            $('#example2').DataTable({
+                "paging": true,
+                "lengthChange": false,
+                "searching": false,
+                "ordering": true,
+                "info": true,
+                "autoWidth": false,
+                "responsive": true,
+            });
+        });
+    </script>
+    <script>
+        UserGetList();
+    </script>
+    <!--  LogOut -->
+    <script>
+        document.querySelector("#logout").addEventListener("click", function() {
+            sessionStorage.clear();
+            window.location.href = "frm-login.php";
+        })
+    </script>
 </body>
 
 </html>

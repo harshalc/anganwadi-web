@@ -145,7 +145,7 @@
     <script src="./assets/js/filter/anganwadiOpstionList.js"></script>
     <script src="./assets/js/filter/anganwadiRegister.js"></script>
     <script src="./assets/js/filter/updateaganwadi.js"></script>
-  
+
     <script>
         praklpOpstionList();
         bitOpstionList();
@@ -165,6 +165,12 @@
     </script>
 
 
+    <script>
+        document.querySelector("#logout").addEventListener("click", function() {
+            sessionStorage.clear();
+            window.location.href = "frm-login.php";
+        })
+    </script>
 </body>
 
 </html>

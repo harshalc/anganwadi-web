@@ -124,6 +124,14 @@
         aganwadiUserGetList();
 
     </script>
+
+    <!--  LogOut -->
+    <script>
+        document.querySelector("#logout").addEventListener("click", function() {
+            sessionStorage.clear();
+            window.location.href = "frm-login.php";
+        })
+    </script>
 </body>
 
 </html>
