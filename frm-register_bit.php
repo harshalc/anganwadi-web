@@ -75,6 +75,7 @@
     <script src="./assets/js/filter/bitRegister.js"></script>
     <script src="./assets/js/filter/updateBit.js"></script>
     <script src="./assets/js/filter/getQueryParamValue.js"></script>
+    <script src="assets/js/parseData.js"></script>
     <script>
         (() => {
             let id = getQueryParamValue("id")

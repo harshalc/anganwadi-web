@@ -9,7 +9,7 @@
 <script src="dist/js/adminlte.js"></script>
 
 <script src="./config.js"></script>
-<script src="assets/js/parseData.js"></script>
+
 <script src="assets/js/api/fetchApi.js"></script>
 <script src="assets/js/api/all-api.js"></script>
 

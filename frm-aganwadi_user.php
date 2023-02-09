@@ -157,6 +157,8 @@
     <script src="./assets/js/filter/anganwadiOpstionList.js"></script>
     <script src="./assets/js/filter/updateAnganwadiUser.js"></script>
 
+    <script src="assets/js/parseData.js"></script>
+
     <script>
         aganwadiuserOpstionList();
         stateOptionsSet();

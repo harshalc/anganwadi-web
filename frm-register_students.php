@@ -192,6 +192,8 @@
     <script src="./assets/js/filter/studentRegister.js"></script>
     <script src="./assets/js/filter/updateStudent.js"></script>
 
+    <script src="assets/js/parseData.js"></script>
+
     <script>
         stateOptionsSet();
         aganwadiOpstionList();
@@ -201,7 +203,7 @@
         (() => {
             let id = getQueryParamValue("id")
 
-            if (!id) {
+             if (!id) {
                 studentRegister();
                 return
             }
@@ -215,6 +217,9 @@
             sessionStorage.clear();
             window.location.href = "frm-login.php";
         })
+
+        const data1 = parseData("user");
+        console.log("user data in login", data1);
     </script>
 </body>
 

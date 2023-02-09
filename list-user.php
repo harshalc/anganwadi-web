@@ -90,6 +90,7 @@
     <?php include './include-common-scripts.php'; ?>
     <?php include './include-datatable-scripts.php'; ?>
     <script src="./assets/js/filter/userGetList.js"></script>
+    <script src="assets/js/parseData.js"></script>
     <script>
         $(function() {
             $("#example1").DataTable({
