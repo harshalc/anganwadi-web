@@ -9,6 +9,18 @@ const anganwadiRegister = (json) => {
     const user = {
       ...anganwadiRegister,
     };
+
+    const emptyField = [];
+    const keys = Object.keys(user);
+    keys.forEach((key) => {
+      if (user[key] == "") {
+        emptyField.push(key);
+      } 
+    });
+    if (emptyField.length != 0) {
+      alert(`${emptyField.join(",")} Please fill this field !!`);
+      return;
+    }
     const response = aganwadiApi.register(user);
     alert("Form submitted successfully");
     window.location.href="list-aganwadi.php"
