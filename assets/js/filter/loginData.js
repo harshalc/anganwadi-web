@@ -11,3 +11,9 @@ const loginData = (data) => {
     sessionStorage.setItem("loginData", JSON.stringify(response));
     redirectPage("./index.php");
   };
+
+
+
+
+
+  
