@@ -25,6 +25,14 @@
 //     return FetchApi("", `/user/${id}`, "DELETE");
 //   };
 
+
+// Login Api
+
+const loginApi = (data) => {
+  const stringifyData = JSON.stringify(data);
+  return FetchApi(stringifyData, "/api_anganwadi/public/login", "POST");
+};
+
 // Praklpa API
 
 const stringifyData = (data) => {
