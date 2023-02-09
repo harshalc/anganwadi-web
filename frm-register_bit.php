@@ -6,12 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>AdminKIT</title>
 
-    <?php include './include-common-style.php';?>
+    <?php include './include-common-style.php'; ?>
 </head>
-<body class="hold-transition sidebar-mini layout-fixed">
-<div class="wrapper">
 
-  <?php include './include-sidebar.php';?>
+<body class="hold-transition sidebar-mini layout-fixed">
+    <div class="wrapper">
+
+        <?php include './include-sidebar.php'; ?>
 
         <!-- Content Wrapper. Contains page content -->
         <div class="content-wrapper">
@@ -68,23 +69,29 @@
             <!-- /.content -->
         </div>
         <?php include './include-copy-right.php' ?>
-</div>
-<!-- ./wrapper -->
-<?php include './include-common-scripts.php';?>
-<script src="./assets/js/filter/bitRegister.js"></script>
-<script src="./assets/js/filter/updateBit.js"></script>
-<script src="./assets/js/filter/getQueryParamValue.js"></script>
-<script>
-    (() => {
-        let id = getQueryParamValue("id")
-        if (!id) {
-             bitRegister();
-            return
-        }
-        updateBit(id)
-    })()
-
-</script>
+    </div>
+    <!-- ./wrapper -->
+    <?php include './include-common-scripts.php'; ?>
+    <script src="./assets/js/filter/bitRegister.js"></script>
+    <script src="./assets/js/filter/updateBit.js"></script>
+    <script src="./assets/js/filter/getQueryParamValue.js"></script>
+    <script>
+        (() => {
+            let id = getQueryParamValue("id")
+            if (!id) {
+                bitRegister();
+                return
+            }
+            updateBit(id)
+        })()
+    </script>
+    <!--  LogOut -->
+    <script>
+        document.querySelector("#logout").addEventListener("click", function() {
+            sessionStorage.clear();
+            window.location.href = "frm-login.php";
+        })
+    </script>
 
 </body>
 

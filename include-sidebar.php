@@ -52,6 +52,10 @@
         <i class="fas fa-th-large"></i>
       </a>
     </li>
+    <li class="nav-item">
+    <a class="nav-link" id="logout" data-slide="true" role="button">Logout
+          </a>
+    </li>
   </ul>
 </nav>
 <!-- /.navbar -->
@@ -280,7 +284,7 @@
           <a href="#" class="nav-link">
             <i class="nav-icon fas fa-circle"></i>
             <p>
-            Monthly Monitoring List
+              Monthly Monitoring List
               <i class="right fas fa-angle-left"></i>
             </p>
           </a>
@@ -297,7 +301,7 @@
           <a href="#" class="nav-link">
             <i class="nav-icon fas fa-circle"></i>
             <p>
-            Weekly Monitoring List
+              Weekly Monitoring List
               <i class="right fas fa-angle-left"></i>
             </p>
           </a>
@@ -314,7 +318,7 @@
           <a href="#" class="nav-link">
             <i class="nav-icon fas fa-circle"></i>
             <p>
-            Anganwadi Suvidha Report
+              Anganwadi Suvidha Report
               <i class="right fas fa-angle-left"></i>
             </p>
           </a>

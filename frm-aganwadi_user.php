@@ -213,8 +213,8 @@
         //         return false;
         //     }
 
-            // alert("Success ");
-            // return true;
+        // alert("Success ");
+        // return true;
         // }
 
 
@@ -229,24 +229,13 @@
             }
         }
     </script>
-
-
-    <!-- <script>
-        var phone_input = document.getElementById("contact_no");
-
-        phone_input.addEventListener('input', () => {
-            phone_input.setCustomValidity('');
-            phone_input.checkValidity();
-        });
-
-        phone_input.addEventListener('invalid', () => {
-            if (phone_input.value === '') {
-                phone_input.setCustomValidity('Enter phone number!');
-            } else {
-                phone_input.setCustomValidity('Enter phone number in this format: 123-456-7890');
-            }
-        });
-    </script> -->
+    <!--  LogOut -->
+    <script>
+        document.querySelector("#logout").addEventListener("click", function() {
+            sessionStorage.clear();
+            window.location.href = "frm-login.php";
+        })
+    </script>
 </body>
 
 </html>
