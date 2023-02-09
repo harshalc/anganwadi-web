@@ -5,12 +5,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>AdminKIT</title>
-    <?php include './include-common-style.php';?>
+    <?php include './include-common-style.php'; ?>
 </head>
+
 <body class="hold-transition sidebar-mini layout-fixed">
     <div class="wrapper">
 
-    <?php include './include-sidebar.php';?>
+        <?php include './include-sidebar.php'; ?>
 
         <!-- Content Wrapper. Contains page content -->
         <div class="content-wrapper">
@@ -73,17 +74,17 @@
                                 <div class="row">
                                     <div class="col-md-4 form-group">
                                         <label for="" class="form-label">Email<sup class="text-danger">*</sup></label>
-                                        <input type="email" name="email" class="form-control" id="email" placeholder="Enter Email Id " required>
+                                        <input type="emai l" name="email" class="form-control" id="email" placeholder="Enter Email Id " onchange="checkEmail()" required>
 
                                     </div>
                                     <div class="col-md-4 form-group">
-                                        <label for="" class="form-label">Contact Number<sup class="text-danger">*</sup></label>
-                                        <input type="tel" name="contact_no" class="form-control" id="contact_no" placeholder="Enter Contact Number " required>
+                                        <label for="contact_no" class="form-label">Contact Number<sup class="text-danger">*</sup></label>
+                                        <input type="tel" name="contact_no" class="form-control" id="contact_no" placeholder="Enter Contact Number " minlength="10" maxlength="10" onkeypress="return onlyNumberKey(event)" required>
 
                                     </div>
                                 </div>
                                 <hr>
-                               
+
 
                                 <div class="card-header">
                                     <h3 class="card-title">User Address</h3>
@@ -117,7 +118,7 @@
                                 </div>
 
                                 <div class="row">
-                                    
+
                                     <div class="col-md-4">
                                         <div class="form-group">
                                             <label>VILLAGE</label>
@@ -151,7 +152,7 @@
         <!-- /.control-sidebar -->
     </div>
     <!-- ./wrapper -->
-    <?php include './include-common-scripts.php';?>
+    <?php include './include-common-scripts.php'; ?>
     <script src="./assets/js/filter/aganwadiUser.js"></script>
     <script src="./assets/js/filter/anganwadiOpstionList.js"></script>
     <script src="./assets/js/filter/updateAnganwadiUser.js"></script>
@@ -162,7 +163,7 @@
         // anganwadiUserRegister();
     </script>
 
-<script>
+    <script>
         (() => {
             let id = getQueryParamValue("id")
 
@@ -172,7 +173,80 @@
             }
             updateAnganwadiUser(id)
         })()
+
+        // function onlyNumberKey(evt) {
+        //     // Only ASCII character in that range allowed
+        //     var ASCIICode = (evt.which) ? evt.which : evt.keyCode
+        //     if (ASCIICode > 31 && (ASCIICode < 48 || ASCIICode > 57)) {
+
+        //         alert('Please provide a valid No ');
+
+        //         return false;
+
+
+        //     } 
+        //     return true;
+        // }
+
+
+
+        function onlyNumberKey(evt) {
+            evt = (evt) ? evt : window.event;
+            var charCode = (evt.which) ? evt.which : evt.keyCode;
+            if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+                // alert("Please enter only Numbers.");
+                return false;
+            }
+
+            return true;
+        }
+
+        // function ValidateNo() {
+        //     var phoneNo = document.getElementById('contact_no');
+
+        //     if (phoneNo.value == "" || phoneNo.value == null) {
+        //         alert("Please enter your Mobile No.");
+        //         return false;
+        //     }
+        //     if (phoneNo.value.length < 10 || phoneNo.value.length > 10) {
+        //         alert("Mobile No. is not valid, Please Enter 10 Digit Mobile No.");
+        //         return false;
+        //     }
+
+            // alert("Success ");
+            // return true;
+        // }
+
+
+
+        function checkEmail() {
+            var email = document.getElementById('email');
+            var filter = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+            if (!filter.test(email.value)) {
+                alert('Please provide a valid email address');
+                email.focus;
+                return false;
+            }
+        }
     </script>
+
+
+    <!-- <script>
+        var phone_input = document.getElementById("contact_no");
+
+        phone_input.addEventListener('input', () => {
+            phone_input.setCustomValidity('');
+            phone_input.checkValidity();
+        });
+
+        phone_input.addEventListener('invalid', () => {
+            if (phone_input.value === '') {
+                phone_input.setCustomValidity('Enter phone number!');
+            } else {
+                phone_input.setCustomValidity('Enter phone number in this format: 123-456-7890');
+            }
+        });
+    </script> -->
 </body>
 
 </html>
