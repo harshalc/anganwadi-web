@@ -32,7 +32,8 @@
 
         <form action="index3.html" method="post">
           <div class="input-group mb-3">
-            <input type="contact_no" id="contact_no" class="form-control" placeholder="Email">
+            <input type="contact_no" id="contact_no" class="form-control" placeholder="Contact Number">
+
             <div class="input-group-append">
               <div class="input-group-text">
                 <span class="fas fa-envelope"></span>
@@ -41,6 +42,7 @@
           </div>
           <div class="input-group mb-3">
             <input type="password" id="password" class="form-control" placeholder="Password">
+           
             <div class="input-group-append">
               <div class="input-group-text">
                 <span class="fas fa-lock"></span>
