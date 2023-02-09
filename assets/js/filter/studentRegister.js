@@ -7,7 +7,7 @@ const aganwadiOpstionList = () => {
     const html = `<option value="${element.id}"> ${element.name}</option>`;
     optionset.push(html);
   });
-  document.querySelector("#name").innerHTML = optionset.join("");
+  document.querySelector("#anganwadi_id").innerHTML = optionset.join("");
 };
 
 //Student Register

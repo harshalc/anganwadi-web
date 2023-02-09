@@ -5,7 +5,7 @@ const studentGetList = () => {
     return `
             <tr>
             <td>${i + 1}</td>
-            <td>${element?.anganwadi_id}</td>
+            <td>${element?.anganwadi_name}</td>
             <td>${element?.f_name} ${element?.m_name} ${element?.l_name}</td>
             <td>${element?.mother_name}</td>
             <td>${element?.father_name}</td>

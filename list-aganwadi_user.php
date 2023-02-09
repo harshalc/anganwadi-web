@@ -56,7 +56,7 @@
                                                 <tr>
                                                     <th>Sr.No</th>
                                                     <th>Aganwadi Name</th>
-                                                    <th>User Name</th>
+                                                    <th>Name</th>
                                                     <th>Contact No.</th>
                                                     <th>Email</th>
                                                     <th>Address</th>

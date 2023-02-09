@@ -5,8 +5,8 @@ const aganwadiUserGetList = () => {
     return `
             <tr>
             <td>${i + 1}</td>
-            <td>${element?.anganwadi_id}</td>
-            <td>${element?.f_name}${element?.m_name}${element?.l_name}</td>
+            <td>${element?.anganwadi_name}</td>
+            <td>${element?.f_name} ${element?.m_name} ${element?.l_name}</td>
             <td>${element?.contact_no}</td>
             <td>${element?.email}</td>
             <td>${element?.state} ${element?.district} ${element?.block} ${

@@ -6,7 +6,7 @@ const UserGetList = () => {
             <tr>
             <td>${i + 1}</td>
             <td>${element?.role_id}</td>
-            <td>${element?.f_name}${element?.m_name}${element?.l_name}</td>
+            <td>${element?.f_name} ${element?.m_name} ${element?.l_name}</td>
             <td>${element?.state} ${element?.district} ${element?.block} ${
       element?.village
     }</td>

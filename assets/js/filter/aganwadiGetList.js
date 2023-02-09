@@ -9,8 +9,8 @@ const aganwadiGetList = () => {
             <td>${i + 1}</td>
             <td>${element?.name}</td>
             <td>${element?.aganwadi_no}</td>
-            <td>${element?.prakalpa_id}</td>
-            <td>${element?.bit_id}</td>
+            <td>${element?.prakalpa_title}</td>
+            <td>${element?.bit_title}</td>
             <td>${element?.year}</td>
             <td>${element?.state} ${element?.district} ${element?.block} ${
       element?.village

@@ -25,6 +25,6 @@ const anganwadiUserRegister = (json) => {
     };
     const response = aganwadiUserApi.register(user);
     alert("Form submitted successfully");
-    window.location.href="list-user.php"
+    window.location.href="list-aganwadi_user.php"
   });
 };

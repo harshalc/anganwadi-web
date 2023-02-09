@@ -50,7 +50,7 @@
                                     <div class="col-md-4">
                                         <div class="form-group">
                                             <label for="Aganvadi" class="form-label">Aganvadi Kendra<sup>*</sup></label>
-                                            <select name="Aganvadi" class="form-control" id="name" required>
+                                            <select name="anganwadi_id" class="form-control" id="anganwadi_id" required>
                                                 <option value="select">Select</option>
                                             </select>
                                         </div>
