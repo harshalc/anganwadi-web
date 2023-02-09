@@ -145,6 +145,8 @@
     <script src="./assets/js/filter/anganwadiOpstionList.js"></script>
     <script src="./assets/js/filter/anganwadiRegister.js"></script>
     <script src="./assets/js/filter/updateaganwadi.js"></script>
+    
+    <script src="assets/js/parseData.js"></script>
 
     <script>
         praklpOpstionList();

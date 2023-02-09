@@ -87,6 +87,8 @@
     <?php include './include-datatable-scripts.php'; ?>
 
     <script src="./assets/js/filter/bitGetList.js"></script>
+
+    <script src="assets/js/parseData.js"></script>
     <script>
         $(function() {
             $("#example1").DataTable({

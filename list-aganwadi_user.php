@@ -100,6 +100,8 @@
 
     <script src="./assets/js/filter/aganwadiUserGetList.js"></script>
 
+    <script src="assets/js/parseData.js"></script>
+
     <script>
         $(function() {
             $("#example1").DataTable({

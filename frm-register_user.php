@@ -152,6 +152,8 @@
     <script src="./assets/js/filter/userRegister.js"></script>
     <script src="./assets/js/filter/updateUser.js"></script>
 
+    <script src="assets/js/parseData.js"></script>
+
     <script>
         // userRegister();
         stateOptionsSet();
@@ -173,6 +175,7 @@
             sessionStorage.clear();
             window.location.href = "frm-login.php";
         })
+        const data1 = parseData("user");
     </script>
 </body>
 
