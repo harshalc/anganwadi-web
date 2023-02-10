@@ -67,12 +67,7 @@
     <span class="brand-text font-weight-light">Admin</span>
   </a>
  
-  <!-- <a href="#" class="brand-link">
-    <img src="assets/img/admin.png" alt="Admin" class="brand-image img-circle elevation-3" style="opacity: .8">
-    <span class="brand-text font-weight-light">Admin</span><br>
 
-    <span class="brand-text font-weight-light" id="user_login_name">bca</span>
-  </a> -->
   <!-- Sidebar -->
   <div class="sidebar"> 
     <!-- Sidebar user panel (optional) -->
@@ -104,12 +99,21 @@
                with font-awesome or any other icon font library -->
         <li class="nav-item menu-open">
           <a href="#" class="nav-link">
-            <i class="nav-icon fas fa-circle"></i>
-            <i class="bi bi-speedometer2"></i>
+            <i class="fa-regular fa-grid-horizontal"></i>
+          
+            <!-- <i class="nav-icon fas fa-circle"></i> -->
+          <span>  <i class="bi bi-speedometer2"></i>
+            <!-- <i class="nav-icon fas fa-speedometer2"></i> -->
+</span>
+          &nbsp;&nbsp;&nbsp;
+
             <p>
               Dashboard
+
               <i class="right fas fa-angle-left"></i>
+            
             </p>
+
           </a>
           <ul class="nav nav-treeview">
             <li class="nav-item">
@@ -123,8 +127,9 @@
         </li>
         <li class="nav-item">
           <a href="#" class="nav-link">
-            <i class="nav-icon fas fa-circle"></i>
-            <p>
+            <!-- <i class="nav-icon fas fa-circle"></i> -->
+            <i class="bi bi-people"></i>  
+            &nbsp;&nbsp;&nbsp;          <p>
               Students
               <i class="right fas fa-angle-left"></i>
             </p>
@@ -146,7 +151,10 @@
         </li>
         <li class="nav-item">
           <a href="#" class="nav-link">
-            <i class="nav-icon fas fa-circle"></i>
+            <!-- <i class="nav-icon fas fa-circle"></i> -->
+          
+            <i class="bi bi-person-circle"></i>
+            &nbsp;&nbsp;&nbsp;
             <p>
               User
               <i class="right fas fa-angle-left"></i>
@@ -169,7 +177,9 @@
         </li>
         <li class="nav-item">
           <a href="#" class="nav-link">
-            <i class="nav-icon fas fa-circle"></i>
+            <!-- <i class="nav-icon fas fa-circle"></i> -->
+            <i class="bi bi-book"></i>
+            &nbsp;&nbsp;&nbsp;
             <p>
               Prakalpa
               <i class="right fas fa-angle-left"></i>
@@ -193,6 +203,7 @@
         <li class="nav-item">
           <a href="#" class="nav-link">
             <i class="nav-icon fas fa-circle"></i>
+            &nbsp;&nbsp;&nbsp;
             <p>
               Bit
               <i class="right fas fa-angle-left"></i>
@@ -215,7 +226,10 @@
         </li>
         <li class="nav-item">
           <a href="#" class="nav-link">
-            <i class="nav-icon fas fa-circle"></i>
+            <!-- <i class="nav-icon fas fa-circle"></i> -->
+            <i class="bi bi-building"></i>
+            
+            &nbsp;&nbsp;&nbsp;
             <p>
               Aganwadi
               <i class="right fas fa-angle-left"></i>
@@ -238,7 +252,10 @@
         </li>
         <li class="nav-item">
           <a href="#" class="nav-link">
-            <i class="nav-icon fas fa-circle"></i>
+            <!-- <i class="nav-icon fas fa-circle"></i> -->
+            <i class="bi bi-person-circle"></i>
+            &nbsp;&nbsp;&nbsp;
+
             <p>
               Aganwadi User
               <i class="right fas fa-angle-left"></i>
@@ -261,7 +278,9 @@
         </li>
         <li class="nav-item">
           <a href="#" class="nav-link">
-            <i class="nav-icon fas fa-circle"></i>
+            <!-- <i class="nav-icon fas fa-circle"></i> -->
+            <i class="bi bi-graph-up-arrow"></i>
+            &nbsp;&nbsp;&nbsp;
             <p>
               Situational Demand Program
               <i class="right fas fa-angle-left"></i>
@@ -290,7 +309,10 @@
         </li>
         <li class="nav-item">
           <a href="#" class="nav-link">
-            <i class="nav-icon fas fa-circle"></i>
+            <!-- <i class="nav-icon fas fa-circle"></i> -->
+            <i class="bi bi-calendar-month"></i>
+
+            &nbsp;&nbsp;&nbsp;
             <p>
               Monthly Monitoring List
               <i class="right fas fa-angle-left"></i>
@@ -300,6 +322,7 @@
             <li class="nav-item">
               <a href="./list-Monthly-monitoring-report.php" class="nav-link">
                 <i class="far fa-circle nav-icon text-warning"></i>
+                <!-- <i class="bi bi-calendar-month"></i> -->
                 <p>Monthly Monitoring Report List</p>
               </a>
             </li>
@@ -307,7 +330,9 @@
         </li>
         <li class="nav-item">
           <a href="#" class="nav-link">
-            <i class="nav-icon fas fa-circle"></i>
+            <!-- <i class="nav-icon fas fa-circle"></i> -->
+            <i class="bi bi-calendar-day"></i>
+            &nbsp;&nbsp;&nbsp;
             <p>
               Weekly Monitoring List
               <i class="right fas fa-angle-left"></i>
@@ -324,7 +349,9 @@
         </li>
         <li class="nav-item">
           <a href="#" class="nav-link">
-            <i class="nav-icon fas fa-circle"></i>
+            <!-- <i class="nav-icon fas fa-circle"></i> -->
+            <i class="bi bi-stars"></i>
+            &nbsp;&nbsp;&nbsp;
             <p>
               Anganwadi Suvidha Report
               <i class="right fas fa-angle-left"></i>
