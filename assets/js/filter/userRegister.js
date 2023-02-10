@@ -17,7 +17,7 @@ const userRegister = (json) => {
       } 
     });
     if (emptyField.length != 0) {
-      alert(`${emptyField.join(",")} Please fill this field !!`);
+      alert(`${notFillValue(emptyField).join(",")} Please fill this field !!`);
       return;
     }
 
