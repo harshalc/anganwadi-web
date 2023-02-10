@@ -79,7 +79,8 @@
                                     </div>
                                     <div class="col-md-4 form-group">
                                         <label for="contact_no" class="form-label">Contact Number<sup class="text-danger">*</sup></label>
-                                        <input type="tel" name="contact_no" class="form-control" id="contact_no" placeholder="Enter Contact Number " minlength="10" maxlength="10" onkeypress="return onlyNumberKey(event)" required>
+                                        <b class="text-danger" id="msg"></b>
+                                        <input type="tel" name="contact_no" class="form-control" id="contact_no" placeholder="Enter Contact Number " minlength="10" maxlength="10" onKeyUp="contactNumber()" required>
 
                                     </div>
                                 </div>
@@ -93,7 +94,7 @@
                                 <div class="row pt-3">
                                     <div class="col-md-4">
                                         <div class="form-group">
-                                            <label for="state" class="form-label">STATE<sup>*</sup></label>
+                                            <label for="state" class="form-label">STATE<sup class="text-danger">*</sup></label>
                                             <select name="state" class="form-control" id="state">
                                                 <option value="select">Select</option>
                                             </select>
@@ -101,7 +102,7 @@
                                     </div>
                                     <div class="col-md-4">
                                         <div class="form-group">
-                                            <label for="" class="form-label">DISTRICT<sup>*</sup></label>
+                                            <label for="" class="form-label">DISTRICT<sup class="text-danger">*</sup></label>
                                             <select name="district" class="form-control" id="district">
                                                 <option value="select">Select</option>
                                             </select>
@@ -109,7 +110,7 @@
                                     </div>
                                     <div class="col-md-4">
                                         <div class="form-group">
-                                            <label>TALUKA</label>
+                                            <label>TALUKA <sup class="text-danger">*</sup></label>
                                             <select name="block" class="form-control" id="block">
                                                 <option value="select">Select</option>
                                             </select>
@@ -121,15 +122,16 @@
 
                                     <div class="col-md-4">
                                         <div class="form-group">
-                                            <label>VILLAGE</label>
+                                            <label>VILLAGE <sup class="text-danger">*</sup></label>
                                             <select name="village" class="form-control" id="village">
                                                 <option value="select">Select</option>
                                             </select>
                                         </div>
                                     </div>
                                     <div class="col-md-4 form-group">
-                                        <label for="" class="form-label">ZIP CODE<sup>*</sup></label>
-                                        <input type="number" name="zip_code" class="form-control" id="zip_code" placeholder="enter zip-code" required>
+                                        <label for="" class="form-label">ZIP CODE<sup class="text-danger"> *</sup></label>
+                                        <b class="text-danger" id="msg"></b>
+                                        <input type="number" name="zip_code" class="form-control" id="zip_code" placeholder="enter zip-code" onKeyUp="zipCode()" required>
                                     </div>
                                 </div>
 
@@ -173,60 +175,10 @@
             updateAnganwadiUser(id)
         })()
 
-        // function onlyNumberKey(evt) {
-        //     // Only ASCII character in that range allowed
-        //     var ASCIICode = (evt.which) ? evt.which : evt.keyCode
-        //     if (ASCIICode > 31 && (ASCIICode < 48 || ASCIICode > 57)) {
-
-        //         alert('Please provide a valid No ');
-
-        //         return false;
+        
 
 
-        //     } 
-        //     return true;
-        // }
-
-
-
-        function onlyNumberKey(evt) {
-            evt = (evt) ? evt : window.event;
-            var charCode = (evt.which) ? evt.which : evt.keyCode;
-            if (charCode > 31 && (charCode < 48 || charCode > 57)) {
-                // alert("Please enter only Numbers.");
-                return false;
-            }
-
-            return true;
-        }
-
-        // function ValidateNo() {
-        //     var phoneNo = document.getElementById('contact_no');
-
-        //     if (phoneNo.value == "" || phoneNo.value == null) {
-        //         alert("Please enter your Mobile No.");
-        //         return false;
-        //     }
-        //     if (phoneNo.value.length < 10 || phoneNo.value.length > 10) {
-        //         alert("Mobile No. is not valid, Please Enter 10 Digit Mobile No.");
-        //         return false;
-        //     }
-
-        // alert("Success ");
-        // return true;
-        // }
-
-
-
-        function checkEmail() {
-            var email = document.getElementById('email');
-            var filter = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-            if (!filter.test(email.value)) {
-                alert('Please provide a valid email address');
-                email.focus;
-                return false;
-            }
-        }
+        
     </script>
     <!--  LogOut -->
     <script>
