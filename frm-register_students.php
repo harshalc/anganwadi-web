@@ -169,7 +169,8 @@
                                     </div>
                                     <div class="col-md-4 form-group">
                                         <label for="" class="form-label">ZIP CODE<sup class="text-danger">*</sup></label>
-                                        <input type="number" name="zip_code" class="form-control" id="zip_code" placeholder="enter zip-code" required>
+                                        <span class="text-danger" id="msg"></span>
+                                        <input type="number" name="zip_code" class="form-control" id="zip_code" placeholder="enter zip-code" onKeyUp="zipCode()" required>
                                     </div>
                                 </div>
                                 <div class="row">

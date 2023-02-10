@@ -77,7 +77,8 @@
                                 <div class="row">
                                     <div class="col-md-4 form-group">
                                         <label for="" class="form-label">Email<sup class="text-danger">*</sup></label>
-                                        <input type="email" name="email" class="form-control" id="email" placeholder="Enter Email Id " required>
+                                        <span class="text-danger" id="msg"></span>
+                                        <input type="email" name="email" class="form-control" id="email" placeholder="Enter Email Id " onKeyUp="checkEmail()" required>
 
                                     </div>
                                     <div class="col-md-4 form-group">
@@ -126,7 +127,8 @@
                                     </div>
                                     <div class="col-md-4 form-group">
                                         <label for="" class="form-label">ZIP CODE<sup>*</sup></label>
-                                        <input type="number" name="zip_code" class="form-control" id="zip_code" placeholder="enter zip-code" required>
+                                        <span class="text-danger" id="msg"></span>
+                                        <input type="number" name="zip_code" class="form-control" id="zip_code" placeholder="enter zip-code" onKeyUp="zipCode()" required>
                                     </div>
                                 </div>
 

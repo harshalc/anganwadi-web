@@ -120,8 +120,12 @@
                                         </div>
                                     </div>
                                     <div class="col-md-4 form-group">
-                                        <label for="" class="form-label">ZIP CODE<sup class="text-danger">*</sup></label>
-                                        <input type="number" name="zip_code" class="form-control" id="zip_code" placeholder="enter zip-code" minlength="6" maxlength="6"  required>
+                                        <label for="" class="form-label">ZIP CODE<sup class="text-danger">*</sup> </label>
+                                        <b class="text-danger" id="msg"></b>
+                                        <input type="number" name="zip_code" class="form-control" id="zip_code" placeholder="enter zip-code" minlength="6" maxlength="6" onKeyUp="zipCode()" required>
+
+                                        <!-- <div id="msg" style="margin-top:0.5rem;  font-size:0.8rem;">
+                                        </div> -->
                                     </div>
                                 </div>
 
@@ -166,34 +170,7 @@
 
 
     <script>
-        const zip_code = document.getElementById("zip_code");
-        zip_code.addEventListener("input", function(event) {
-            const zipCodeValue = event.target.value;
-            const zipCodeRegex = /^\d{5}(?:[-\s]\d{4})?$/;
-            if (!zipCodeRegex.test(zipCodeValue)) {
-                zip_code.setCustomValidity("Please enter a valid zip code");
-            } else {
-                zip_code.setCustomValidity("");
-            }
-        });
-
-        const UserFormData = document.querySelector("UserFormData");
-        UserFormData.addEventListener("submit", function(event) {
-            event.preventDefault();
-            const zipCodeValue = zip_code.value;
-            console.log(zipCodeValue);
-        });
-
-        // function zipKey(evt) {
-        //     evt = (evt) ? evt : window.event;
-        //     var charCode = (evt.which) ? evt.which : evt.keyCode;
-        //     if (charCode > 31 && (charCode < 48 || charCode > 57)) {
-        //         alert("Please enter only Numbers.");
-        //         return false;
-        //     }
-
-        //     return true;
-        // }
+        
 
         document.querySelector("#logout").addEventListener("click", function() {
             sessionStorage.clear();
