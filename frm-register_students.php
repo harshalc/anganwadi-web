@@ -170,7 +170,7 @@
                                     <div class="col-md-4 form-group">
                                         <label for="" class="form-label">ZIP CODE<sup class="text-danger">*</sup></label>
                                         <span class="text-danger" id="msg"></span>
-                                        <input type="number" name="zip_code" class="form-control" id="zip_code" placeholder="enter zip-code" onKeyUp="zipCode()" required>
+                                        <input type="tel" name="zip_code" class="form-control" id="zip_code" placeholder="enter zip-code"minlength="6" maxlength="6" onKeyUp="zipCode()" required>
                                     </div>
                                 </div>
                                 <div class="row">
