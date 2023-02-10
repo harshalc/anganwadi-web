@@ -3,6 +3,7 @@
   <img class="animation__shake" src="dist/img/AdminLTELogo.png" alt="AdminLTELogo" height="60" width="60">
 </div>
 
+
 <!-- Navbar -->
 <nav class="main-header navbar navbar-expand navbar-white navbar-light">
   <!-- Left navbar links -->
@@ -70,17 +71,17 @@
     <img src="assets/img/admin.png" alt="Admin" class="brand-image img-circle elevation-3" style="opacity: .8">
     <span class="brand-text font-weight-light">Admin</span><br>
 
-    <span class="brand-text font-weight-light" id="user_login_name">pranali</span>
+    <span class="brand-text font-weight-light" id="user_login_name">bca</span>
   </a> -->
   <!-- Sidebar -->
-  <div class="sidebar">
+  <div class="sidebar"> 
     <!-- Sidebar user panel (optional) -->
-    <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+     <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="image">
           <img src="dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block">Alexander Pierce</a>
+          <a href="#" class="d-block" id="user_login_name">Alexander Pierce</a>
         </div>
       </div>
 
@@ -104,6 +105,7 @@
         <li class="nav-item menu-open">
           <a href="#" class="nav-link">
             <i class="nav-icon fas fa-circle"></i>
+            <i class="bi bi-speedometer2"></i>
             <p>
               Dashboard
               <i class="right fas fa-angle-left"></i>
