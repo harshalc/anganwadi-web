@@ -27,12 +27,15 @@ const studentRegister = (json) => {
     const emptyField = [];
     const keys = Object.keys(user);
     keys.forEach((key) => {
+      if(key=="pass_date"||key=="pass_photo"){
+        return
+      }
       if (user[key] == "") {
         emptyField.push(key);
       }
     });
     if (emptyField.length != 0) {
-      alert(`${emptyField.join(",")} Please fill this field !!`);
+      alert(`${notFillValue(emptyField).join(",")} Please fill this field !!`);
       return;
     }
 
