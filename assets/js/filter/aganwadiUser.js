@@ -24,7 +24,6 @@ const anganwadiUserRegister = (json) => {
       ...anganwadiUserRegister,
     };
 
-    
     const emptyField = [];
     const keys = Object.keys(user);
     keys.forEach((key) => {

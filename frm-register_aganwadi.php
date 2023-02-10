@@ -9,6 +9,7 @@
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed">
+    <button hidden id="modalBtn" class="toastrDefaultError">click to open model</button>
     <div class="wrapper">
 
         <?php include './include-sidebar.php'; ?>
@@ -120,18 +121,15 @@
                                         </div>
                                     </div>
                                     <div class="col-md-4 form-group">
-                                        <label for="" class="form-label">ZIP CODE<sup class="text-danger">*</sup> </label>
-                                        <b class="text-danger" id="msg"></b>
-                                        <input type="number" name="zip_code" class="form-control" id="zip_code" placeholder="enter zip-code" minlength="6" maxlength="6" onKeyUp="zipCode()" required>
-
-                                        <!-- <div id="msg" style="margin-top:0.5rem;  font-size:0.8rem;">
-                                        </div> -->
+                                        <label for="" class="form-label">ZIP CODE<sup class="text-danger">*</sup></label>
+                                        <span class="text-danger" id="msg"></span>
+                                        <input type="tel" name="zip_code" class="form-control" id="zip_code" placeholder="enter zip-code" minlength="6" maxlength="6" onKeyUp="zipCode()" required>
                                     </div>
                                 </div>
 
                                 <div class="row">
                                     <div class="col-md-12 d-flex justify-content-center" id="">
-                                        <button type="button" class="btn btn-info my-2" id="submit">Submit</button>
+                                        <button type="button" class="btn btn-info my-2 " id="submit">Submit</button>
                                     </div>
                                 </div>
                             </div>
@@ -170,8 +168,6 @@
 
 
     <script>
-        
-
         document.querySelector("#logout").addEventListener("click", function() {
             sessionStorage.clear();
             window.location.href = "frm-login.php";

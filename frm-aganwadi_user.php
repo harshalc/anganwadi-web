@@ -78,8 +78,8 @@
 
                                     </div>
                                     <div class="col-md-4 form-group">
-                                        <label for="contact_no" class="form-label">Contact Number<sup class="text-danger">*</sup></label>
-                                        <b class="text-danger" id="msg"></b>
+                                        <label for="" class="form-label">Contact Number<sup class="text-danger">*</sup></label>
+                                        <span class="text-danger" id="msg1"></span>
                                         <input type="tel" name="contact_no" class="form-control" id="contact_no" placeholder="Enter Contact Number " minlength="10" maxlength="10" onKeyUp="contactNumber()" required>
 
                                     </div>
@@ -129,9 +129,9 @@
                                         </div>
                                     </div>
                                     <div class="col-md-4 form-group">
-                                        <label for="" class="form-label">ZIP CODE<sup class="text-danger"> *</sup></label>
-                                        <b class="text-danger" id="msg"></b>
-                                        <input type="number" name="zip_code" class="form-control" id="zip_code" placeholder="enter zip-code" onKeyUp="zipCode()" required>
+                                        <label for="" class="form-label">ZIP CODE<sup class="text-danger">*</sup></label>
+                                        <span class="text-danger" id="msg"></span>
+                                        <input type="tel" name="zip_code" class="form-control" id="zip_code" placeholder="enter zip-code"minlength="6" maxlength="6" onKeyUp="zipCode()" required>
                                     </div>
                                 </div>
 
@@ -174,11 +174,7 @@
             }
             updateAnganwadiUser(id)
         })()
-
-        
-
-
-        
+ 
     </script>
     <!--  LogOut -->
     <script>

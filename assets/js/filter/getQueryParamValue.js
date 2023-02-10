@@ -70,6 +70,7 @@ function zipCode() {
 //   return true;
 // }
 
+
 function isUSAContactNO(str) {
   return /^\d{10}(-\d{4})?$/.test(str);
 }
@@ -83,7 +84,7 @@ function contactNumber() {
   } else {
     message = "Invalid Contact Number";
   }
-  document.getElementById("msg").innerHTML = message;
+  document.getElementById("msg1").innerHTML = message;
 }
 
 // Email ID
@@ -91,11 +92,10 @@ function checkEmail() {
   var email = document.getElementById('email');
   var filter = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   if (!filter.test(email.value)) {
-      // alert('Please provide a valid email address');
+      alert('Please provide a valid email address');
       email.focus;
       return false;
   }
-  document.getElementById("msg").innerHTML = message;
 }
 
 // function emailId(str) {
