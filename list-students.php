@@ -24,11 +24,13 @@
                             <h1 class="m-0">Students List</h1>
                         </div><!-- /.col -->
                         <div class="col-sm-6">
+                        <a href="./frm-register_students.php"> <button type="button" class="btn btn-sm btn-secondary float-sm-right"> <i class="fas fa-plus"></i> Create Student</button></a>
+                        <!-- <div class="col-sm-6">
                             <ol class="breadcrumb float-sm-right">
                                 <li class="breadcrumb-item"><a href="#">Home</a></li>
                                 <li class="breadcrumb-item active">Students List</li>
                             </ol>
-                        </div><!-- /.col -->
+                        </div>/.col -->
                     </div><!-- /.row -->
                 </div><!-- /.container-fluid -->
             </div>

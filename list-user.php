@@ -23,12 +23,10 @@
                         <div class="col-sm-6">
                             <h1 class="m-0">User List</h1>
                         </div>
-                        <!-- <div class="col-sm-3">
-                            <button type="button" class="btn btn-secondary float-left"><i class="fas fa-plus"></i> Add User</button>
-                        </div> -->
+                       
 
                         <div class="col-sm-6">
-                           <button type="button" class="btn btn-sm btn-secondary float-sm-right"> <a hrf=./><i class="fas fa-plus"></i> Add User</button>
+                        <a href="./frm-register_user.php"> <button type="button" class="btn btn-sm btn-secondary float-sm-right"> <i class="fas fa-plus"></i> Create User</button></a>
                             <!-- <ol class="breadcrumb float-sm-right">
                                 <li class="breadcrumb-item"><a href="#">Home</a></li>
                                 <li class="breadcrumb-item active">User List</li>
