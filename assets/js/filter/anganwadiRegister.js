@@ -18,7 +18,7 @@ const anganwadiRegister = (json) => {
       } 
     });
     if (emptyField.length != 0) {
-      alert(`${emptyField.join(",")} Please fill this field !!`);
+      alert(`${notFillValue(emptyField).join(",")} Please fill this field !!`);
       return;
     }
     const response = aganwadiApi.register(user);
