@@ -1,6 +1,11 @@
 const idNameOfObj={
   role_id:"Role",
+  prakalpa_id:"Prakalpa id",
+  bit_id:"Bit id",
+  name:"Aganwadi Name",
+  aganwadi_no:"Aganwadi Number",
   anganwadi_id: "Aganvadi Kendra",
+  year:"Year",
   f_name: "First NAme",
   m_name:"Middle Name",
   l_name:"Last Name",
@@ -13,8 +18,8 @@ const idNameOfObj={
   state:"State",
   district:"District",
   block:"Taluka",
-  village:"village",
-  zip_code:"pin code",
+  village:"Tillage",
+  zip_code:"Pin code",
 }
 
 const notFillValue=(arr)=>{
