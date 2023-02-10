@@ -7,9 +7,12 @@
     <title>AdminKIT</title>
 
     <?php include './include-common-style.php'; ?>
+    <!-- Toastr -->
+    <!-- <link rel="stylesheet" href="./plugins/toastr/toastr.min.css"> -->
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed">
+    <button hidden id="modalBtn" class="toastrDefaultError">click to open model</button>
     <div class="wrapper">
 
         <?php include './include-sidebar.php'; ?>
@@ -59,9 +62,10 @@
 
                                 <div class="row">
                                     <div class="col-md-12 d-flex justify-content-center" id="">
-                                        <button type="button" class="btn btn-info my-2" id="submit">Submit</button>
+                                        <button type="button" class="btn btn-info my-2 " id="submit">Submit</button>
                                     </div>
                                 </div>
+
                             </div>
                     </form>
                 </div>
@@ -74,9 +78,10 @@
     <?php include './include-common-scripts.php'; ?>
     <script src="./assets/js/filter/bitRegister.js"></script>
     <script src="./assets/js/filter/updateBit.js"></script>
-    <script src="./assets/js/filter/getQueryParamValue.js"></script>
+    <!-- <script src="./assets/js/filter/getQueryParamValue.js"></script> -->
     <script src="assets/js/parseData.js"></script>
     <script>
+        tosterDisplay(300, "please enter valu");
         (() => {
             let id = getQueryParamValue("id")
             if (!id) {
@@ -93,6 +98,22 @@
             window.location.href = "frm-login.php";
         })
     </script>
+    <script>
+        // $(function() {
+        //     var Toast = Swal.mixin({
+        //         toast: true,
+        //         position: 'top-end',
+        //         showConfirmButton: false,
+        //         timer: 300
+        //     });
+
+        //     $('.toastrDefaultError').click(function() {
+        //         toastr.error('Lorem ipsum dolor sit amet, consetetur sadipscing elitr.')
+        //     });
+
+        // });
+    </script>
+
 
 </body>
 

@@ -16,3 +16,14 @@
 <script src="./assets/js/filter/getQueryParamValue.js"></script>
 <!-- <script src="./assets\js\parseData.js"></script> -->
 
+<!-- model  -->
+
+<!-- SweetAlert2 -->
+<script src="./plugins/sweetalert2/sweetalert2.min.js"></script>
+<!-- Toastr -->
+<script src="./plugins/toastr/toastr.min.js"></script>
+<script src="./assets/js/filter/tosterDisplay.js"></script>
+    <!-- AdminLTE App -->
+    <script src="./dist/js/adminlte.min.js"></script>
+    <!-- Page specific script -->
+

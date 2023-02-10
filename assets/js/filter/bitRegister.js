@@ -1,6 +1,7 @@
 const bitRegister=(json)=>{
     const title = document.querySelector("#title")
     const submit = document.querySelector("#submit");
+    const modalBtn=document.querySelector("#modalBtn")
     submit.addEventListener("click",(e)=>{
         e.preventDefault();
     const user ={
@@ -15,7 +16,8 @@ const bitRegister=(json)=>{
       } 
     });
     if (emptyField.length != 0) {
-      alert(`${emptyField.join(",")} Please fill this field !!`);
+      // alert(`${emptyField.join(",")} Please fill this field !!`);
+      modalBtn.click()
       return;
     }
     const response= bitApi.register(user);

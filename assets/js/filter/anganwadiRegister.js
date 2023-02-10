@@ -1,9 +1,10 @@
 const anganwadiRegister = (json) => {
   const UserFormData = document.querySelector("#UserFormData");
   const submit = document.querySelector("#submit");
+  const modalBtn=document.querySelector("#modalBtn")
   submit.addEventListener("click", (e) => {
     e.preventDefault();
-    console.log("Button ");
+   
     const formData = new FormData(UserFormData);
     const anganwadiRegister = Object.fromEntries(formData);
     const user = {
@@ -17,8 +18,11 @@ const anganwadiRegister = (json) => {
         emptyField.push(key);
       } 
     });
+    tosterDisplay(300,notFillValue(emptyField).join(","))
     if (emptyField.length != 0) {
-      alert(`${notFillValue(emptyField).join(",")} Please fill this field !!`);
+      // alert(`${notFillValue(emptyField).join(",")} Please fill this field !!`);
+    console.log("clicked btn");
+     (()=> modalBtn.click())()
       return;
     }
     const response = aganwadiApi.register(user);
