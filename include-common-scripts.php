@@ -14,5 +14,5 @@
 <script src="assets/js/api/all-api.js"></script>
 
 <script src="./assets/js/filter/getQueryParamValue.js"></script>
-<script src="./assets\js\parseData.js"></script>
+<!-- <script src="./assets\js\parseData.js"></script> -->
 
