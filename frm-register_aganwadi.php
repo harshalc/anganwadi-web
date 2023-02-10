@@ -125,8 +125,6 @@
                                     </div>
                                 </div>
 
-
-
                                 <div class="row">
                                     <div class="col-md-12 d-flex justify-content-center" id="">
                                         <button type="button" class="btn btn-info my-2" id="submit">Submit</button>
@@ -167,21 +165,35 @@
     </script>
 
 
-    <script>    
-        function zipKey(evt) {
-            console.log("evt for zip code ",evt);
-            evt = (evt) ? evt : window.event;
-            var charCode = (evt.which) ? evt.which : evt.keyCode;
-            console.log("this is charCode",charCode,evt.target.value,evt.target.value.length);
-            if (charCode > 31 && (charCode < 48 || charCode > 57)) {
-                alert("Please enter only Numbers.");
-                return false;
+    <script>
+        const zip_code = document.getElementById("zip_code");
+        zip_code.addEventListener("input", function(event) {
+            const zipCodeValue = event.target.value;
+            const zipCodeRegex = /^\d{5}(?:[-\s]\d{4})?$/;
+            if (!zipCodeRegex.test(zipCodeValue)) {
+                zip_code.setCustomValidity("Please enter a valid zip code");
+            } else {
+                zip_code.setCustomValidity("");
             }
-            
-            return true;
-        }
-        
+        });
 
+        const UserFormData = document.querySelector("UserFormData");
+        UserFormData.addEventListener("submit", function(event) {
+            event.preventDefault();
+            const zipCodeValue = zip_code.value;
+            console.log(zipCodeValue);
+        });
+
+        // function zipKey(evt) {
+        //     evt = (evt) ? evt : window.event;
+        //     var charCode = (evt.which) ? evt.which : evt.keyCode;
+        //     if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+        //         alert("Please enter only Numbers.");
+        //         return false;
+        //     }
+
+        //     return true;
+        // }
 
         document.querySelector("#logout").addEventListener("click", function() {
             sessionStorage.clear();
