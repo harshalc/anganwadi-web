@@ -22,12 +22,17 @@
                     <div class="row mb-2">
                         <div class="col-sm-6">
                             <h1 class="m-0">User List</h1>
-                        </div><!-- /.col -->
+                        </div>
+                        <!-- <div class="col-sm-3">
+                            <button type="button" class="btn btn-secondary float-left"><i class="fas fa-plus"></i> Add User</button>
+                        </div> -->
+
                         <div class="col-sm-6">
-                            <ol class="breadcrumb float-sm-right">
+                           <button type="button" class="btn btn-sm btn-secondary float-sm-right"> <a hrf=./><i class="fas fa-plus"></i> Add User</button>
+                            <!-- <ol class="breadcrumb float-sm-right">
                                 <li class="breadcrumb-item"><a href="#">Home</a></li>
                                 <li class="breadcrumb-item active">User List</li>
-                            </ol>
+                            </ol> -->
                         </div><!-- /.col -->
                     </div><!-- /.row -->
                 </div><!-- /.container-fluid -->
