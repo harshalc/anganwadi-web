@@ -121,7 +121,7 @@
                                     </div>
                                     <div class="col-md-4 form-group">
                                         <label for="" class="form-label">ZIP CODE<sup class="text-danger">*</sup></label>
-                                        <input type="number" name="zip_code" class="form-control" id="zip_code" placeholder="enter zip-code" minlength="6" maxlength="6" onkeypress="return zipKey(event)" required>
+                                        <input type="number" name="zip_code" class="form-control" id="zip_code" placeholder="enter zip-code" minlength="6" maxlength="6"  required>
                                     </div>
                                 </div>
 
@@ -172,7 +172,7 @@
             console.log("evt for zip code ",evt);
             evt = (evt) ? evt : window.event;
             var charCode = (evt.which) ? evt.which : evt.keyCode;
-            console.log("this is charCode",charCode,evt.target.value);
+            console.log("this is charCode",charCode,evt.target.value,evt.target.value.length);
             if (charCode > 31 && (charCode < 48 || charCode > 57)) {
                 alert("Please enter only Numbers.");
                 return false;
@@ -180,6 +180,7 @@
             
             return true;
         }
+        
 
 
         document.querySelector("#logout").addEventListener("click", function() {
