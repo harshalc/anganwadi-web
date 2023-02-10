@@ -9,4 +9,4 @@ if (userSession?.id === undefined) {
 }
 console.log(userSession )
 
-document.querySelector("#user_login_name").innerHTML=userSession.f_name
+document.querySelector("#user_login_name").innerHTML=userSession.f_name;
