@@ -22,15 +22,12 @@
                     <div class="row mb-2">
                         <div class="col-sm-6">
                             <h1 class="m-0">Situational Demand Program Report List</h1>
-                            
                         </div><!-- /.col -->
                         <div class="col-sm-6">
-                        <a href="./detail-tatkal-mahiti-report.php"> <button type="button" class="btn btn-sm btn-secondary float-sm-right"> <i class="fas fa-plus"></i> Create Situation Demand</button></a>
-                        <!-- <div class="col-sm-6">
                             <ol class="breadcrumb float-sm-right">
                                 <li class="breadcrumb-item"><a href="#">Home</a></li>
                                 <li class="breadcrumb-item active">Situational Demand Program Report List</li>
-                            </ol> -->
+                            </ol>
                         </div><!-- /.col -->
                     </div><!-- /.row -->
                 </div><!-- /.container-fluid -->

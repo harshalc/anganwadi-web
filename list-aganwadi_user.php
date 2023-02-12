@@ -26,13 +26,11 @@
                             <h1 class="m-0">Aganwadi User List</h1>
                         </div><!-- /.col -->
                         <div class="col-sm-6">
-                        <a href="./frm-aganwadi_user.php"> <button type="button" class="btn btn-sm btn-secondary float-sm-right"> <i class="fas fa-plus"></i> Create User Anganwadi</button></a>
-                        <!-- <div class="col-sm-6">
                             <ol class="breadcrumb float-sm-right">
                                 <li class="breadcrumb-item"><a href="#">Home</a></li>
                                 <li class="breadcrumb-item active">Aganwadi User List</li>
                             </ol>
-                        </div>/.col -->
+                        </div><!-- /.col -->
                     </div><!-- /.row -->
                 </div><!-- /.container-fluid -->
             </div>
@@ -102,8 +100,6 @@
 
     <script src="./assets/js/filter/aganwadiUserGetList.js"></script>
 
-    <script src="assets/js/parseData.js"></script>
-
     <script>
         $(function() {
             $("#example1").DataTable({
@@ -127,14 +123,6 @@
     <script>
         aganwadiUserGetList();
 
-    </script>
-
-    <!--  LogOut -->
-    <script>
-        document.querySelector("#logout").addEventListener("click", function() {
-            sessionStorage.clear();
-            window.location.href = "frm-login.php";
-        })
     </script>
 </body>
 

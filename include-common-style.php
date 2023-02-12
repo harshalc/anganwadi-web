@@ -13,5 +13,3 @@
   
   <!-- jQuery -->
 <script src="plugins/jquery/jquery.min.js"></script>
- <!-- Toastr -->
-<link rel="stylesheet" href="./plugins/toastr/toastr.min.css">

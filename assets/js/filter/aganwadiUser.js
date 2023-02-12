@@ -23,21 +23,8 @@ const anganwadiUserRegister = (json) => {
     const user = {
       ...anganwadiUserRegister,
     };
-
-    const emptyField = [];
-    const keys = Object.keys(user);
-    keys.forEach((key) => {
-      if (user[key] == "") {
-        emptyField.push(key);
-      } 
-    });
-    if (emptyField.length != 0) {
-      alert(`${notFillValue(emptyField).join(",")} Please fill this field !!`);
-      return;
-    }
-
     const response = aganwadiUserApi.register(user);
     alert("Form submitted successfully");
-    // window.location.href="list-aganwadi_user.php"
+    window.location.href="list-aganwadi_user.php"
   });
 };

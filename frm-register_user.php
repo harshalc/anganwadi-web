@@ -77,13 +77,12 @@
                                 <div class="row">
                                     <div class="col-md-4 form-group">
                                         <label for="" class="form-label">Email<sup class="text-danger">*</sup></label>
-                                        <input type="email" name="email" class="form-control" id="email" placeholder="Enter Email Id " onchange="checkEmail()" required>     
+                                        <input type="email" name="email" class="form-control" id="email" placeholder="Enter Email Id " required>
 
                                     </div>
                                     <div class="col-md-4 form-group">
                                         <label for="" class="form-label">Contact Number<sup class="text-danger">*</sup></label>
-                                        <span class="text-danger" id="msg1"></span>
-                                        <input type="tel" name="contact_no" class="form-control" id="contact_no" placeholder="Enter Contact Number " minlength="10" maxlength="10" onKeyUp="contactNumber()" required>
+                                        <input type="tel" name="contact_no" class="form-control" id="contact_no" placeholder="Enter Contact Number " required>
 
                                     </div>
                                 </div>
@@ -126,11 +125,12 @@
                                         </div>
                                     </div>
                                     <div class="col-md-4 form-group">
-                                        <label for="" class="form-label">ZIP CODE<sup class="text-danger">*</sup></label>
-                                        <span class="text-danger" id="msg"></span>
-                                        <input type="tel" name="zip_code" class="form-control" id="zip_code" placeholder="enter zip-code"minlength="6" maxlength="6" onKeyUp="zipCode()" required>
+                                        <label for="" class="form-label">ZIP CODE<sup>*</sup></label>
+                                        <input type="number" name="zip_code" class="form-control" id="zip_code" placeholder="enter zip-code" required>
                                     </div>
                                 </div>
+
+
 
                                 <div class="row">
                                     <div class="col-md-12 d-flex justify-content-center" id="">
@@ -152,8 +152,6 @@
     <script src="./assets/js/filter/userRegister.js"></script>
     <script src="./assets/js/filter/updateUser.js"></script>
 
-    <script src="assets/js/parseData.js"></script>
-
     <script>
         // userRegister();
         stateOptionsSet();
@@ -168,14 +166,6 @@
             }
             updateUser(id)
         })()
-    </script>
-    <!--  LogOut -->
-    <script>
-        document.querySelector("#logout").addEventListener("click", function() {
-            sessionStorage.clear();
-            window.location.href = "frm-login.php";
-        })
-        const data1 = parseData("user");
     </script>
 </body>
 

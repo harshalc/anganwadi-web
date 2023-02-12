@@ -6,13 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>AdminKIT</title>
 
-    <?php include './include-common-style.php'; ?>
+    <?php include './include-common-style.php';?>
 </head>
-
 <body class="hold-transition sidebar-mini layout-fixed">
-    <div class="wrapper">
+<div class="wrapper">
 
-        <?php include './include-sidebar.php'; ?>
+  <?php include './include-sidebar.php';?>
 
         <!-- Content Wrapper. Contains page content -->
         <div class="content-wrapper">
@@ -65,39 +64,31 @@
             <!-- /.content -->
         </div>
         <?php include './include-copy-right.php' ?>
-    </div>
-    <!-- ./wrapper -->
-    <?php include './include-common-scripts.php'; ?>
+</div>
+<!-- ./wrapper -->
+<?php include './include-common-scripts.php';?>
 
 
-    <script src="./assets/js/filter/praklpaRegister.js"></script>
-    <!-- <script src="./assets/js/filter/getQueryParamValue.js"></script> -->
-    <script src="./assets/js/filter/updatePraklpa.js"></script>
+<script src="./assets/js/filter/praklpaRegister.js"></script>
+<!-- <script src="./assets/js/filter/getQueryParamValue.js"></script> -->
+<script src="./assets/js/filter/updatePraklpa.js"></script>
 
-    <script src="assets/js/parseData.js"></script>
+<script>
+    (() => {
+        let id = getQueryParamValue("id")
+       
+        if (!id) {
+            praklpaRegister();
+            return
+        }
+        updatePraklpa(id)
+    })()
 
-    <script>
-        (() => {
-            let id = getQueryParamValue("id")
-
-            if (!id) {
-                praklpaRegister();
-                return
-            }
-            updatePraklpa(id)
-        })()
-    </script>
-    <!--  LogOut -->
-    <script>
-        document.querySelector("#logout").addEventListener("click", function() {
-            sessionStorage.clear();
-            window.location.href = "frm-login.php";
-        })
-    </script>
-    <!-- <script>
+</script>
+<!-- <script>
      praklpaRegister();
 </script> -->
-
+       
 </body>
 
 </html>

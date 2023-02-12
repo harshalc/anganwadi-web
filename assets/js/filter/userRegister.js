@@ -8,19 +8,6 @@ const userRegister = (json) => {
     const user = {
       ...userRegister,
     };
-
-    const emptyField = [];
-    const keys = Object.keys(user);
-    keys.forEach((key) => {
-      if (user[key] == "") {
-        emptyField.push(key);
-      } 
-    });
-    if (emptyField.length != 0) {
-      alert(`${notFillValue(emptyField).join(",")} Please fill this field !!`);
-      return;
-    }
-
     const response = userApi.register(user);
     alert("Form submitted successfully");
     window.location.href="list-user.php"
